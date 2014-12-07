@@ -1,10 +1,5 @@
-<head>
-   
- <script src="./card-stack.controller.js"></script>   
-</head>
-<body ng-app="snckcoApp">
 
-    <div id="viewport" ng-controller="Card-stackCtrl">
+    <div id="viewport">
         <ul class="stack" swing-stack>
             <li
                 swing-card
@@ -17,9 +12,4 @@
                 swing-on-dragend="dragend(eventName, eventObject)"
                 ng-repeat="card in cards" ng-class="card.name">{{card.symbol}}</li>
         </ul>
-    </div> 
-    <div id="source">
-        <p>FUUUUUK</p>
     </div>
-</body>
-</html>

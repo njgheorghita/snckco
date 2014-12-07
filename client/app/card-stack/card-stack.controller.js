@@ -2,7 +2,7 @@
 
 angular.module('snckcoApp')
 
-.controller('Card-stackCtrl', function ($scope) {
+.controller('cardStackCtrl', function ($scope) {
         $scope.cards = [
             {name: 'clubs', symbol: '♣'},
             {name: 'diamonds', symbol: '♦'},
