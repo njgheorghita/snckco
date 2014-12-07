@@ -15,11 +15,12 @@
                 swing-on-dragstart="dragstart(eventName, eventObject)"
                 swing-on-dragmove="dragmove(eventName, eventObject)"
                 swing-on-dragend="dragend(eventName, eventObject)"
-                ng-repeat="card in cards" ng-class="card.name">{{card.symbol}}</li>
+                ng-repeat="card in cards" ng-class="card.name">
+                <img ng-src="{{card}}" width="200" height="auto"></img></li>
         </ul>
     </div> 
     <div id="source">
-        <p>FUUUUUK</p>
+        <p><---less like: more like---></p>
     </div>
 </body>
 </html>
