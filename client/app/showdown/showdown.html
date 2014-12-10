@@ -1,0 +1,23 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div>
+</div>
+
+<body ng-app="snckcoApp">
+    <div id="moreLike">
+        <p>Choose the snck you want to see next week</p>
+    </div>
+
+    <div id="votingPics" ng-controller="ShowdownCtrl">
+    	<ul class="vote">
+    		<li ng-repeat="vote in showdowns" ng-click"toggle(vote)" ng-class="{'selected':vote.selected}">
+    			<input type="image" ng-src="{{vote}}" width="200" height="auto"/>
+    		</li>
+    	</ul>
+    </div>
+
+    <div>
+        <input type="button">
+        VOTE!
+    </div>
+</body>

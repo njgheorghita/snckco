@@ -23,6 +23,18 @@ button {
 input {
   width: 50px; }
 
+#moreLike {
+  color: #67cf6b;
+  font-size: 2em;
+  margin-top: 75px;
+}
+
+#lessLike {
+  margin-top: 25px;
+  color: #F2728C;
+  font-size: 2em;
+}
+
 #viewport {
   width: 500px;
   height: 500px;
@@ -30,6 +42,8 @@ input {
   border: 10px solid #85B4FF;
   border-radius: 10px;
   margin: 100px auto 0;
+  margin-top: 25px;
+  overflow: hidden;
   position: relative; }
   #viewport .stack {
     width: 200px;
@@ -43,19 +57,26 @@ input {
   #viewport li {
     width: 480px;
     height: 480px;
-    list-style: none;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     position: absolute;
     top: 0;
     left: 0;
-    
-    line-height: 500px;
+    vertical-align: bottom; 
     text-align: center;
-    font-size: 100px;
+    margin-top: 25px;
+    font-size: 2em;
     border: 0px solid #FFFFFF;
-    box-sizing: border-box;
     cursor: default; }
+/*careful doesn't work in ie6*/
+  #viewport li > p {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 5px;
+    color: #85B4FF;
+    margin-top: 75px;
+    margin-bottom: 10px;
+  }
 
     #viewport li.in-deck:nth-child(3) {
       top: 2px;

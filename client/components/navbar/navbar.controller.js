@@ -7,6 +7,16 @@ angular.module('snckcoApp')
       'link': '/'
     }];
 
+    $scope.cardstack = [{
+      'card-stack': 'Cards',
+      'link': '/cards'
+    }];
+
+    $scope.showdown = [{
+      'showdown': 'Showdown',
+      'link': '/showdown'
+    }];
+
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;

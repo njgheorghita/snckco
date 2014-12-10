@@ -1,9 +1,19 @@
+<div ng-include="'components/navbar/navbar.html'">
+
+</div>
+
+
 <head>
    
  <script src="./card-stack.controller.js"></script>   
 </head>
 <body ng-app="snckcoApp">
-
+    <div id="moreLike">
+        <p>I want more sncks like</p>
+    </div>
+    <div id="swipeRight">
+        <p>Swipe Right</p>
+    </div>
     <div id="viewport" ng-controller="Card-stackCtrl">
         <ul class="stack" swing-stack>
             <li
@@ -15,12 +25,20 @@
                 swing-on-dragstart="dragstart(eventName, eventObject)"
                 swing-on-dragmove="dragmove(eventName, eventObject)"
                 swing-on-dragend="dragend(eventName, eventObject)"
-                ng-repeat="card in cards" ng-class="card.name">
-                <img ng-src="{{card}}" width="200" height="auto"></img></li>
+                ng-repeat="card in cards track by $index">
+                <img ng-src="./../../assets/images/{{card.name}}.jpg" width="200" height="200"></img>
+                <p>{{card.proper}}</p>
+                <p>{{card.price}}</p>
+                <p>Calories: {{card.calories}}</p>
+            </li>
+
         </ul>
     </div> 
-    <div id="source">
-        <p><---less like: more like---></p>
+    <div id="lessLike">
+        <p>I want less sncks like</p>
+    </div>
+    <div id="swipeLeft">
+        <p>Swipe Left</p>
     </div>
 </body>
-</html>
+

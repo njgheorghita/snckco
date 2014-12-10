@@ -1,0 +1,156 @@
+     [{
+     	"name":"banana",
+     	"proper":"Bagel",
+          "price":"$1.00",
+          "calories": "250"
+     },{
+     	"name":"cheesePbCrackers",
+     	"proper":"Cheese & Peanut Butter Crackers",
+          "price":"$0.75",
+          "calories": "120"
+     },{
+     	"name":"clifBuildersBar",
+     	"proper":"White Chocolate Macadamia Clif Builders Bar",
+          "price":"$2.50",
+          "calories": "320"
+     },{
+     	"name":"crunchBar",
+     	"proper":"Crunch",
+          "price":"$1.00",
+          "calories": "175"
+     },{
+     	"name":"doritosNachoCheese",
+     	"proper":"Doritos: Nacho Flavored",
+          "price":"$0.75",
+          "calories": "140"
+     },{
+     	"name":"famousAmos",
+     	"proper":"Famous Amos Cookies",
+          "price":"$1.25",
+          "calories": "210"
+     },{
+     	"name":"fruitySnacks",
+     	"proper":"Cherry Fruit Snacks",
+          "price":"$1.50",
+          "calories": "260"
+     },{
+     	"name":"gardettos",
+     	"proper":"Original Gardettos",
+          "price":"$1.50",
+          "calories": "150"
+     },{
+     	"name":"hersheysAlmonds",
+     	"proper":"Hershey's Milk Chocolate with Almonds",
+          "price":"$1.25",
+          "calories": "240"
+     },{
+     	"name":"hundredCalOreos",
+     	"proper":"Oreos: 100 Calories Pack",
+          "price":"$1.00",
+          "calories": "100"
+     },{
+     	"name":"laysBbqChips",
+     	"proper":"Lay's BBQ Chips",
+          "price":"$0.75",
+          "calories": "130"
+     },{
+     	"name":"lifeSaversFruity",
+     	"proper":"Lifesaver's Fruity",
+          "price":"$1.00",
+          "calories": "25"
+     },{
+     	"name":"lifeSaversMint",
+     	"proper":"Lifesaver's Mints",
+          "price":"$1.00",
+          "calories": "50"
+     },{
+     	"name":"m&msPlain",
+     	"proper":"M&M's Plain",
+          "price":"$1.00",
+          "calories": "160"
+     },{
+     	"name":"mentosMint",
+     	"proper":"Mento's Mints",
+          "price":"$1.25",
+          "calories": "140"
+     },{
+     	"name":"natureValleyOatshoney",
+     	"proper":"Nature Valley: Oats 'n Honey",
+          "price":"$1.00",
+          "calories": "150"
+     },{
+     	"name":"plantersPeanuts",
+     	"proper":"Planter's Peanuts",
+          "price":"$0.50",
+          "calories": "75"
+     },{
+     	"name":"popcornersKettle",
+     	"proper":"Popcorner's Kettle Cooked",
+          "price":"$1.50",
+          "calories": "100"
+     },{
+     	"name":"popTartBrownSugarCinnamon",
+     	"proper":"PopTarts: Brown Sugar Cinnamon",
+          "price":"$1.75",
+          "calories": "240"
+     },{
+     	"name":"popTartHotFudgeSundae",
+     	"proper":"PopTarts: Hot Fudge Sundae",
+          "price":"$1.75",
+          "calories": "240"
+     },{
+     	"name":"reesesPbCups",
+     	"proper":"Reese's Cups",
+          "price":"$1.00",
+          "calories": "210"
+     },{
+     	"name":"riceKrispieTreat",
+     	"proper":"Rice Krispie Treat",
+          "price":"$0.75",
+          "calories": "125"
+     },{
+     	"name":"roldGoldPretzelsTinyTwist",
+     	"proper":"Rold Gold's Tiny Twist",
+          "price":"$1.25",
+          "calories": "130"
+     },{
+     	"name":"skittles",
+     	"proper":"Skittles Original",
+          "price":"$1.25",
+          "calories": "260"
+     },{
+     	"name":"skittlesWildBerry",
+     	"proper":"Skittles Wildberry",
+          "price":"$1.25",
+          "calories": "265"
+     },{
+     	"name":"snickers",
+     	"proper":"Snicker's",
+          "price":"$1.00",
+          "calories": "210"
+     },{
+     	"name":"snydersHoneyMustardPieces",
+     	"proper":"Snyder's: Honey Mustard Pieces",
+          "price":"$1.25",
+          "calories": "160"
+     },{
+     	"name":"threeMuskateers",
+     	"proper":"3 Muskateers",
+          "price":"$1.00",
+          "calories": "190"
+     },{
+     	"name":"trailMix",
+     	"proper":"Trail Mix",
+          "price":"$0.75",
+          "calories": "120"
+     },{
+     	"name":"twix",
+     	"proper":"Twix Bar",
+          "price":"$1.00",
+          "calories": "150"
+     },{
+     	"name":"zooCrackers",
+     	"proper":"Zoo Crackers",
+          "price":"$1.00",
+          "calories":"90"
+     }]
