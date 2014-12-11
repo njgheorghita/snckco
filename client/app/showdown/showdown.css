@@ -1,3 +1,88 @@
-.active {
-	border: 2px solid red;
+body{
+  font-family:'Open Sans', verdana, sans-serif;
+ /* background:#FFFFFF;*/
+  color:#eee;
+  font-size:12px;
+  color: #85B4FF;
+}
+.question{
+  font-size:24px;
+  text-align:center;
+  padding:30px;
+  font-weight:300;
+  color:#85B4FF;
+}
+.btn{
+  width: 25em;
+  height: 25em;
+  border-width: 10px;
+  border-style: solid;
+  border-radius:10px;
+  border-color: white;
+  padding:30px;
+  font-size:12px;
+  margin-bottom:15px;
+}
+.row1 .btn{
+    background-image: url("./../../assets/images/showdown1.jpg");
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.row2 .btn{
+    background-image: url("./../../assets/images/showdown2.jpg");
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.row3 .btn{
+    background-image: url("./../../assets/images/showdown3.png");
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.row4 .btn{
+    background-image: url("./../../assets/images/showdown4.jpg");
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.btn.active{
+  border-color: #67cf6b;
+  box-shadow:0 0 0;
+}
+.btn.active:hover{
+  border-color: #67cf6b;
+}
+.btn:hover{
+  border-color: #85B4FF;
+
+}
+.btn.btn-danger{
+  background-color:#d9534f;
+  padding:10px;
+  margin-top:30px;
+}
+.btn.btn-danger:hover{
+  background-color:#d2322d;
+}
+input.form-control{
+  border-radius:0;
+  margin-top:10px;
+}
+select.form-control{
+  border-radius:0;
+}
+i{
+  font-size:24px;
+  margin-right:5px;
+}
+i.rated{
+  color:#428bca;
+}
+span.ng-isolate-scope{
+  margin:auto;
+}
+.rating{
+  text-align:center;
 }
