@@ -14,8 +14,6 @@ button, input, code {
   background: #FDE991;
   padding: 0; }
 
-
-
 button {
   color: #C7433E;
   cursor: pointer; }
@@ -60,19 +58,12 @@ input {
     background: #fff;
     border-radius: 8px;
     position: absolute;
-    top: 0;
-    left: 0;
-    vertical-align: bottom; 
+    left: 150px;
+    vertical-align: middle; 
     text-align: center;
-    margin-top: 25px;
-    font-size: 2em;
     border: 0px solid #FFFFFF;
-    cursor: default; }
-/*careful doesn't work in ie6*/
-  #viewport li > p {
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 5px;
+    cursor: default; 
+    font-size: 2em;
     color: #85B4FF;
     margin-top: 75px;
     margin-bottom: 10px;
@@ -114,3 +105,41 @@ input {
   margin: 20px auto; }
   #source a {
     color: #C7433E; }
+
+
+#viewport .stack {
+  -webkit-perspective: 800;
+}
+#viewport .stack .card.flipped {
+  -webkit-transform: rotatex(-180deg);
+}
+#viewport .stack .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+#viewport .stack .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-size: 1em;
+    text-align: center;
+    line-height: 20px;
+}
+#viewport .stack .card .front {
+  position: absolute;
+  z-index: 1;
+    color: white;
+    cursor: pointer;
+}
+#viewport .stack .card .back {
+  -webkit-transform: rotatex(-180deg);
+    background: blue;
+    background: white;
+    color: #85B4FF;
+    cursor: pointer;
+
+}

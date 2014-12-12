@@ -34,4 +34,6 @@ angular.module('snckcoApp')
         $scope.dragend = function (eventName, eventObject) {
             console.log('dragend', eventObject);
         };
-    });
+    })
+;
+

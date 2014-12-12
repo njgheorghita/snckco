@@ -26,13 +26,7 @@ body{
 }
 
 .row1 .btn{
-  background: rgba(252,236,252,0);
-background: -moz-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -webkit-gradient(left top, left bottom, color-stop(35%, rgba(252,236,252,0)), color-stop(39%, rgba(252,236,252,0.06)), color-stop(100%, rgba(255,124,216,1))), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -webkit-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -o-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -ms-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: linear-gradient(to bottom, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
+    background-image: url("./../../assets/images/showdown1.jpg");
     background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
     background-position: center center;

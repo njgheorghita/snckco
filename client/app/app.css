@@ -2,8 +2,10 @@
 /**
  * Bootstrap Fonts
  */
-
-@font-face {
+ @font-face{
+    font-family: 'Lobster Two' ;
+  }
+/*@font-face {
     font-family: 'Glyphicons Halflings';
     src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
     src: url('../bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
@@ -16,7 +18,7 @@
  *Font Awesome Fonts
  */
 
-@font-face {
+/*@font-face {
     font-family: 'FontAwesome';
     src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
     src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),

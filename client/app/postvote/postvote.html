@@ -1,0 +1,34 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div ng-app="snckcoApp">
+    <div class="col-md-12">
+
+        <div class="question">Thanks for voting!
+        </div>
+        <div ng-controller="PostvoteCtrl">
+        Results: {{$rootScope.tally}}
+        </div>
+        
+        <div class ="row1">
+             
+                <my-continent continent-id="1" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row2">
+            
+                <my-continent continent-id="2" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row3">
+         
+                <my-continent continent-id="3" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row4">
+            
+                <my-continent continent-id="4" target="continent"></my-continent>
+           
+        </div>
+        </div>
+       
+    </div>

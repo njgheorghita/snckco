@@ -2,13 +2,10 @@
 
 angular.module('snckcoApp')
 
-
-
-
-	.directive('myContinent', function () {
+.directive('myContinent', function () {
 		return {
 			restrict: 'E',
-			template: '<div class="col-md-4"> <a class="btn col-md-12" ng-click="target=continentId" ng-class="{active : target == continentId}"><img</div>',
+			template: '<div class="col-md-3"> <a class="btn col-md-12" ng-click="target=continentId" ng-class="{active : target == continentId}"><img</div>',
 			scope: {
 				continentId: '@',
 				showdowns: '@',
@@ -17,8 +14,7 @@ angular.module('snckcoApp')
 		};
 	})
 
-	
-.controller('ShowdownCtrl', function ($scope) {
+.controller('ShowdownCtrl', function ($scope, User) {
 
 		$scope.showdowns = [
 		'./../../assets/images/showdown1.jpg',
@@ -28,9 +24,18 @@ angular.module('snckcoApp')
 		];
 
 
-
 		$scope.myDropDown = 'first';
 		$scope.continent = 0;
+		$scope.count = 0;
+		
+		
+
+		$scope.apply = function($rootScope, count, continent) {
+			$scope.count = $scope.continent;
+			$rootScope.tally = $scope.count;
+		}
+
+		
 	});
 
 

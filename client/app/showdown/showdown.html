@@ -1,6 +1,5 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div>
 
 <div ng-app="snckcoApp">
     <div class="col-md-12">
@@ -8,7 +7,7 @@
         <div class="question">What snck do you want to see next week?
         </div>
         <div>
-        selected: {{continent}}
+        selected: {{continent}} {{count}}
         </div>
         
         <div class ="row1">
@@ -31,10 +30,26 @@
                 <my-continent continent-id="4" target="continent"></my-continent>
            
         </div>
+        
+            <div class ="voteButton">
+                <a href="/postvote">
+                <button type="button" ng-click="apply()" style="
+                    height: 100px; 
+                    width:150px;
+                    background-color: #85B4FF;
+                    color: white;
+                    font-family: 'Lobster Two', cursive;
+                    font-size: 3em;
+                    border-radius: 8px;">
+                        Vote!
+                </button>
+                </a>
+            </div>
 
         </div>
+       
     </div>
-</div>
+
 
 
 
