@@ -2,7 +2,16 @@
 
 angular.module('snckcoApp')
 
-.controller('Card-stackCtrl', function ($scope, $http) {
+.service('myService', function () {
+    var x='';
+    return {
+        getX : function () {
+            return x;
+        }
+    };
+})
+
+.controller('Card-stackCtrl', function ($scope, $http, myService) {
         $http.get('./../../assets/data/card-stack.json').success(function(data) {
                 $scope.cards = data;
         });
@@ -11,7 +20,7 @@ angular.module('snckcoApp')
             console.log('throwout', eventObject);
         };
 
-        $scope.throwoutleft = function (eventName, eventObject) {
+        $scope.throwoutleft = function (eventName, eventObject, $scope) {
             console.log('throwoutleft', eventObject);
         };
 
@@ -27,9 +36,21 @@ angular.module('snckcoApp')
             console.log('dragstart', eventObject);
         };
 
-        $scope.dragmove = function (eventName, eventObject) {
+            $scope.leftside= {'border-color': $scope.sample};
+        
+
+          $scope.sample = '';
+
+        $scope.dragmove = function (eventName, eventObject, $scope) {
             console.log('dragmove', eventObject);
+
+            
+           
+             //$scope.leftside = { 'border-left-color': $scope.getColor };
+            
         };
+
+        
 
         $scope.dragend = function (eventName, eventObject) {
             console.log('dragend', eventObject);

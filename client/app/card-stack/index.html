@@ -14,8 +14,8 @@
     <div id="swipeRight">
         <p>Swipe Right</p>
     </div>
-    <div id="viewport" ng-controller="Card-stackCtrl">
-        <ul class="stack" swing-stack>
+    <div id="viewport" ng-controller="Card-stackCtrl" ng-style="leftside">
+        <ul class="stack" swing-stack >
             <li 
                     class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
 
@@ -28,7 +28,7 @@
                     swing-on-throwoutright="throwoutright(eventName, eventObject)"
                     swing-on-throwin="throwin(eventName, eventObject)"
                     swing-on-dragstart="dragstart(eventName, eventObject)"
-                    swing-on-dragmove="dragmove(eventName, eventObject)"
+                    swing-on-dragmove="dragmove(eventName, eventObject, $scope)"
                     swing-on-dragend="dragend(eventName, eventObject)"
                     ng-repeat="card in cards track by $index">
                     <img ng-src="./../../assets/images/{{card.name}}.jpg" width="200" height="300"></img>
