@@ -16,7 +16,13 @@ button, input, code {
 
 button {
   color: #C7433E;
-  cursor: pointer; }
+  background-color: white;
+  cursor: pointer; 
+  height: 70px;
+  margin-bottom: 5px;
+  position: relative;
+  vertical-align: bottom;
+  }
 
 input {
   width: 50px; }
@@ -36,110 +42,75 @@ input {
 #viewport {
   width: 500px;
   height: 500px;
-  background: #FFFFFF;
+  background-image: url('./../../assets/images/vending.jpg');
+  background-position: center;
   border: 10px solid #85B4FF;
   border-radius: 10px;
-  margin: 100px auto 0;
+  margin: 1000px auto 0;
   margin-top: 25px;
   overflow: hidden;
   position: relative; }
+ 
   #viewport .stack {
-    width: 200px;
-    height: 300px;
-    background: #FFFFFF;
+ 
     position: absolute;
     top: 0px;
-    left: 100px;
+    left: -35px;
     margin-left: -100px;
-    border-radius: 10px; }
-  #viewport li {
-    width: 480px;
-    height: 480px;
-    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+
+     }
+  
+  #viewport .card {
+    width: 450px;
+    height: 450px;
     border-radius: 8px;
     position: absolute;
     left: 150px;
-    vertical-align: middle; 
-    text-align: center;
-    border: 0px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
     cursor: default; 
-    font-size: 2em;
+    font-size: 1.5em;
     color: #85B4FF;
-    margin-top: 125px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    transform-origin: right center;
   }
-
-    #viewport li.in-deck:nth-child(3) {
-      top: 2px;
-      transform: translate(2px, 2px) rotate(0.4deg); }
-    #viewport li.in-deck:nth-child(2) {
-      top: 4px;
-      transform: translate(-4px, -2px) rotate(-1deg); }
-  #viewport #control {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 0; }
-    #viewport #control button {
-      background: #FFFFFF;
-      color: #373737;
-      font-weight: bold;
-      border: none;
-      font: normal 18px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif;
-      margin: 0 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-      box-shadow: 0 2px 0 #63211F;
-      outline: none;
-      position: relative; }
-      #viewport #control button:active {
-        background: #63211F;
-        color: #FFFFFF;
-        bottom: -2px;
-        box-shadow: none; }
-
-#source {
-  width: 500px;
-  margin: 20px auto; }
-  #source a {
-    color: #C7433E; }
-
 
 #viewport .stack {
   -webkit-perspective: 800;
 }
+
 #viewport .stack .card.flipped {
-  -webkit-transform: rotatex(-180deg);
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
 }
 #viewport .stack .card {
-  width: 100%;
-  height: 100%;
+
   -webkit-transform-style: preserve-3d;
   -webkit-transition: 0.5s;
+
 }
 #viewport .stack .card .face {
-  margin-top: -75px;
-  width: 100%;
-  height: 100%;
-  position: relative;
+
   -webkit-backface-visibility: hidden ;
   z-index: 2;
-    font-size: 1em;
+    font-family: Georgia;
+    font-size: 1.5em;
     text-align: center;
+    line-height: 100px;
 }
 #viewport .stack .card .front {
   position: absolute;
   z-index: 1;
-    color: white;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
+    background-color: white;
 }
 #viewport .stack .card .back {
-  -webkit-transform: rotatex(-180deg);
-    background: blue;
-    background: white;
-    color: #85B4FF;
+  -webkit-transform: rotateY(-180deg);
     cursor: pointer;
-
+    background-color: white;
 }

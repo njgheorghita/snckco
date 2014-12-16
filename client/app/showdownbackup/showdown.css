@@ -25,30 +25,6 @@ body{
   margin-bottom:15px;
 }
 
-.row1 .btn{
-    background-image: url("./../../assets/images/showdown1.jpg");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row2 .btn{
-    background-image: url("./../../assets/images/showdown2.jpg");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row3 .btn{
-    background-image: url("./../../assets/images/showdown3.png");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row4 .btn{
-    background-image: url("./../../assets/images/showdown4.jpg");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 .btn.active{
   border-color: #67cf6b;
   box-shadow:0 0 0;
@@ -58,8 +34,12 @@ body{
 }
 .btn:hover{
   border-color: #85B4FF;
-
 }
+
+.results{
+  border: purple;
+}
+
 .btn.btn-danger{
   background-color:#d9534f;
   padding:10px;

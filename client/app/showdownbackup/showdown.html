@@ -1,0 +1,90 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+
+<div ng-app="snckcoApp">
+    <div class="col-md-12">
+
+        <div class="question">What snck do you want to see next week?
+        </div>
+        <div>
+        selected: {{continent}} count: {{count}} 
+        </div>
+        
+        <div class ="row1">
+             
+                <my-continent continent-id="1" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row2">
+            
+                <my-continent continent-id="2" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row3">
+         
+                <my-continent continent-id="3" target="continent"></my-continent>
+            
+        </div>
+        <div class ="row4">
+            
+                <my-continent continent-id="4" target="continent"></my-continent>
+           
+        </div>
+        
+            <div class ="voteButton">
+                
+                <button type="button" ng-click="apply()" style="
+                    height: 100px; 
+                    width:150px;
+                    background-color: #85B4FF;
+                    color: white;
+                    font-family: 'Lobster Two', cursive;
+                    font-size: 3em;
+                    border-radius: 8px;">
+                        Vote!
+                </button>
+               
+            </div>
+
+        </div>
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--</div>
+
+<body ng-app="snckcoApp">
+    <div id="moreLike">
+        <p>Choose the snck you want to see next week</p>
+    </div>
+
+    <div id="votingPics" ng-controller="ShowdownCtrl">
+    	<ul class="vote">
+    		<li ng-repeat="vote in showdowns">
+    			<input type="image" ng-src="{{vote}}" width="200" height="auto"/>
+    		</li>
+    	</ul>
+    </div>
+
+    <div>
+
+    <div>
+        <input type="button">
+        VOTE!
+    </div>
+</body>

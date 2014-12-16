@@ -1,0 +1,136 @@
+[
+{ 	"name": "barbie";
+	"source": "http://gallery.roborooter.com/v/friendsphotos/sarahd/highschool/australia/barbievendingmachine.jpg.html?g2_imageViewsIndex=1";
+},
+{	"name": "helloKitty";
+	"source": "http://irl-emoticon.tumblr.com/post/104695942827";
+},
+{ 	"name": "old";
+	"source": "http://perrymasonsworld.tumblr.com/post/104310547631";
+},
+{ 	"name": "books";
+	"source": "http://hermitforever.tumblr.com/post/105216089742";
+},
+{	"name": "weed";
+	"source": "http://sirspliff.com/post/75484665177/got-a-quarter-visit-thatsgoodweed-com-for-the";
+},
+{	"name": "williamsburg";
+	"source": "http://madregularphotos.tumblr.com/post/88706872817";
+	"public": "unsure";
+},
+{	"name": "old2";
+	"source": "http://grayflannelsuit.tumblr.com/post/86789815778/coin-operated-roulette-dr-pepper-bottle-vending";
+	"public": "unsure";
+},
+{	"name": "anime";
+	"source": "http://gogocandoh.tumblr.com/post/103255329774";
+	"public": "unsure";
+},
+{	"name": "rusty";
+	"source": "http://borntoliveordie.tumblr.com/post/79756016108/march-9th-2014-old-stuffs-that-i-found-in";
+	"public": "unsure";
+},
+{	"name": "japan";
+	"source": "http://borntoliveordie.tumblr.com/post/79756016108/march-9th-2014-old-stuffs-that-i-found-in";
+	"public": "unsure";
+},
+{	"name": "japan2";
+	"source": "http://borntoliveordie.tumblr.com/post/79756016108/march-9th-2014-old-stuffs-that-i-found-in";
+	"public": "unsure";
+},
+{	"name": "pokemon";
+	"source": "http://thebleachdoctor.tumblr.com/post/92289875708/at-westfield-southcenter-mall-in-washington-just";
+	"public": "unsure";
+},
+{	"name": "pencils";
+	"source": "http://www.design-is-fine.org/post/99170629984/pencil-vending-machine-1910s-osborne";
+	"public": "unsure";
+},
+{	"name": "pens";
+	"source": "http://www.design-is-fine.org/post/95948705079/vendorama-ballpoint-pen-vending-machine-1950s";
+	"public": "unsure";
+},
+{	"name": "graffiti";
+	"source": "http://heartisbreaking.tumblr.com/post/87287350917/pic0028-by-jonathan-janke-on-flickr";
+	"public": "unsure";
+},
+{	"name": "shutter";
+	"source": "http://ninetail-fox.tumblr.com/post/105173773611/a-shutter-not-a-vending-machine-shibuya";
+	"public": "unsure";
+},
+{	"name": "pepsi";
+	"source": "http://www.frankieskitchen.co.uk/2012/10/frankies-finds-vending-machine-love.html";
+	"public": "unsure";
+};
+{	"name": "campbells";
+	"source": "http://www.frankieskitchen.co.uk/2012/10/frankies-finds-vending-machine-love.html";
+	"public": "unsure";
+};
+{	"name": "irish";
+	"source": "http://www.frankieskitchen.co.uk/2012/10/frankies-finds-vending-machine-love.html";
+	"public": "unsure";
+};
+{	"name": "wedding";
+	"source": "http://www.frankieskitchen.co.uk/2012/10/frankies-finds-vending-machine-love.html";
+	"public": "unsure";
+};
+{	"name": "old3";
+	"source": "http://us-machine.com/vending-machines/vintage-vending-machine.php";
+	"public": "unsure";
+},
+{	"name": "old4";
+	"source": "http://pixabay.com/en/coke-machine-coca-cola-old-antique-100902/";
+	"public": "yes";
+},
+{	"name": "ancient";
+	"source": "http://pixabay.com/en/vending-machine-ancient-disused-417976/";
+	"public": "yes";
+},
+{	"name": "condoms";
+	"source": "http://www.flickr.com/photos/opencage/20554719/in/photostream/";
+	"public": "yes";
+},
+{	"name": "old5";
+	"source": "http://www.publicdomainpictures.net/pictures/60000/nahled/vending-machine.jpg";
+	"public": "yes";
+},
+{	"name": "gum";
+	"source": "http://www.gameroomshow.com/data/phoo/2006_07_11/MVC-003L.JPG";
+	"public": "yes";
+},
+{	"name": "stamps";
+	"source": "http://s0.geograph.org.uk/geophotos/01/04/15/1041536_95cc2de4.jpg";
+	"public": "yes";
+},
+{	"name": "candies";
+	"source": "http://commons.wikimedia.org/wiki/File:CandiesVendingMachine1952.jpg";
+	"public": "yes";
+},
+{	"name": "quarters";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Vendstar3000.JPG";
+	"public": "yes";
+},
+{	"name": "bait";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Live_bait_vending_machine_Brighton_Recreation_Area.JPG";
+	"public": "yes";
+},
+{	"name": "bikeTubes";
+	"source": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2012-08_Fahrradschlauchautomat_anagoria.JPG/800px-2012-08_Fahrradschlauchautomat_anagoria.JPG";
+	"public": "yes";
+},
+{	"name": "art";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Kunstautomat.jpg";
+	"public": "yes";
+},
+{	"name": "parking";
+	"source": http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Bahnautomat.jpg";
+	"public": "yes";
+},
+{	"name": "stamps2";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Stamp_vending_machines_in_the_London_Heathrow_Airport.jpg";
+	"public": "yes";
+},
+{	"name": "juice";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Mosfilm_-_Museum_-_img03.jpg";
+	"public": "yes";
+}

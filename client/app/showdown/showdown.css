@@ -13,6 +13,7 @@ body{
   font-weight:300;
   color:#85B4FF;
 }
+
 .btn{
   width: 25em;
   height: 25em;
@@ -25,36 +26,6 @@ body{
   margin-bottom:15px;
 }
 
-.row1 .btn{
-  background: rgba(252,236,252,0);
-background: -moz-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -webkit-gradient(left top, left bottom, color-stop(35%, rgba(252,236,252,0)), color-stop(39%, rgba(252,236,252,0.06)), color-stop(100%, rgba(255,124,216,1))), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -webkit-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -o-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: -ms-linear-gradient(top, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-background: linear-gradient(to bottom, rgba(252,236,252,0) 35%, rgba(252,236,252,0.06) 39%, rgba(255,124,216,1) 100%), url('./../../assets/images/showdown1.jpg') no-repeat;
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row2 .btn{
-    background-image: url("./../../assets/images/showdown2.jpg");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row3 .btn{
-    background-image: url("./../../assets/images/showdown3.png");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-.row4 .btn{
-    background-image: url("./../../assets/images/showdown4.jpg");
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-}
 .btn.active{
   border-color: #67cf6b;
   box-shadow:0 0 0;
@@ -64,8 +35,16 @@ background: linear-gradient(to bottom, rgba(252,236,252,0) 35%, rgba(252,236,252
 }
 .btn:hover{
   border-color: #85B4FF;
-
 }
+
+.purpler{
+  background-color: purple;
+}
+
+.results{
+  border: purple;
+}
+
 .btn.btn-danger{
   background-color:#d9534f;
   padding:10px;
