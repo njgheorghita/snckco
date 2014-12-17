@@ -17,9 +17,7 @@ angular.module('snckcoApp')
 
 .controller('ShowdownCtrl', function ($scope, $http, User, myContinents) {
 
-		$http.get('./../../assets/data/card-stack.json').then(function(data) {
-			$scope.languages = data;
-		});
+		
 
 		$scope.myDropDown = 'first';
 		$scope.continent = 0;

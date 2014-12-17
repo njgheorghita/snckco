@@ -37,9 +37,7 @@ angular.module('snckcoApp')
              //$scope.leftside = { 'border-left-color': $scope.getColor };
             
         };
-
         
-
         $scope.dragend = function (eventName, eventObject) {
             console.log('dragend', eventObject);
         };
