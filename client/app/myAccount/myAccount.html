@@ -1,20 +1,80 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 
-<div class = "header">
-	<p>
-		Hello _______. 
-	</p>
-	
 
-	<p>
-		mySncks
-	</p>
+<div ng-controller="MyAccountCtrl">	
 
-	<p>
-		mymachines
-	<p>
+		<div class="greeting">
+			<p>
+				Hello _______. 
+			</p>
+		</div>
 
+			<div class="mymachines">	
+				<button class="p" ng-click="hello = !hello;">
+					mymachines
+				</button>
+
+				<div ng-show="!hello">
+					<p>
+						mymachines info
+						mymachines info
+						mymachines info
+					</p>
+				</div>
+			</div>
+
+			<div class="sncks">
+				<button class="p" ng-click="sncks = !sncks;">
+					mysncks
+				</button>
+
+				<div ng-show="!sncks">
+					<p>
+						mysncks info
+						mysncks info
+						mysncks info
+					</p>
+				</div>
+			</div>
+
+			<div class="account">
+				<button class="p" ng-click="account = !account;">
+					account
+				</button>
+
+				<div ng-show="!account">
+					<p>
+						account settings info
+						account settings info
+						account settings info
+					</p>
+				</div>
+			</div>
+
+
+
+
+
+
+
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+      <p>Welcome to snck.co</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+<!--</div>
 	<p>
 		account settings
 	</p>

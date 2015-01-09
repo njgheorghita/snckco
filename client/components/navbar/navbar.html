@@ -1,11 +1,22 @@
   <style>
-    div.navbar{
+    div.navbar{ 
       background-color: #85B4FF;
-      background-image: url('./../../assets/images/vending.jpg');
-    height: 100px;
-    font-size: 2.5em;
-    color: white;
+      background-image: url('./../../assets/images/machines/32.jpg');
+      background-position: left bottom;
+      height: 100px;
+      font-size: 2.5em;
+      color: white;
 
+
+      -webkit-transition: height 2s ease;
+      -moz-transition: height 2s ease;
+      -o-transition: height 2s ease;
+      -ms-transition: height 2s ease;
+      transition: height 2s ease;
+  }
+
+  div.navbar:active {
+    height: 1000px;
   }
 
   div .navbar-main {

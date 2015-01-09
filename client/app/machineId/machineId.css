@@ -1,12 +1,24 @@
 body {
 }
 
-
+.butt {
+	height: 75px;
+	background-color: #85B4FF;
+	width: 150px;
+	color: white;
+	font-size: 2.5em;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
 
 .header {
 	font-size: 3em;
 	color: #85B4FF;
 	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 input {
