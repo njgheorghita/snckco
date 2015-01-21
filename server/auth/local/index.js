@@ -39,7 +39,7 @@ router.get('/auth/facebook', passport.authenticate('facebook',function(){
 }));
 
 router.get('/auth/facebook/callback', 
-  passport.authenticate('facebook', { successRedirect: '/auth/local/success',
+  passport.authenticate('facebook', { successRedirect: '/success',
                                       failureRedirect: '/login' }));
 
 router.get('/success',function(req,res){
