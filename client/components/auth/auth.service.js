@@ -39,6 +39,25 @@ angular.module('snckcoApp')
         return deferred.promise;
       },
 
+      fblogin : function(user,callback){
+        var cb = callback || angular.noop;
+        var deferred = $q.defer();
+
+        $http.get('/auth/local/auth/facebook').
+        success(function(data) {
+          $cookieStore.put('token', data.token);
+          currentUser = User.get();
+          deferred.resolve(data);
+          return cb();
+        }).
+        error(function(err) {
+          this.logout();
+          deferred.reject(err);
+          return cb(err);
+        }.bind(this));
+
+        return deferred.promise;
+      },
       /**
        * Delete access token and user info
        *

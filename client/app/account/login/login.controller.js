@@ -23,4 +23,14 @@ angular.module('snckcoApp')
       }
     };
 
+    $scope.fbLogin = function() {
+      console.log("fadsfadfs");
+      Auth.fblogin()
+      .then(function(asdf){
+        console.log(asdf,"afsda");
+      })
+      .catch(function(err){
+        console.error(err);
+      })
+    };
   });
