@@ -6,7 +6,7 @@ angular.module('snckcoApp')
 	$scope.errorMessage = '';
 	$scope.getCurrentUser = Auth.getCurrentUser();
 
-	 $http.get('http://localhost:9000/api/machines').success(function(data) {
+	 $http.get('/api/machines').success(function(data) {
             $scope.machineIdentification = data;
     });
 
@@ -28,7 +28,7 @@ angular.module('snckcoApp')
 					//this is where you need to push machineid to current user array if it doesn't match existing id
 					//if it matches existing id, take you straight to home page
 					console.log('doodoodooodooodoo');
-					$http.put('http://localhost:9000/api/users/api/' + $scope.getCurrentUser._id + '/addMachine', {machineId: $scope.upperMachineId})
+					$http.put('/api/users/api/' + $scope.getCurrentUser._id + '/addMachine', {machineId: $scope.upperMachineId})
 					.success(function() {
 						// refresh the locally cached user
 						Auth.refresh();

@@ -14,7 +14,7 @@ angular.module('snckcoApp')
 	$scope.inputValue = false;
 	$scope.machineIdentification;
 
-	$http.get('http://localhost:9000/api/machines').success(function(data) {
+	$http.get('/api/machines').success(function(data) {
                 $scope.machineIdentification = data;
      });
 
@@ -60,7 +60,7 @@ angular.module('snckcoApp')
 		console.log($scope.d);
 	
 
-		$http.post('http://localhost:9000/api/contacts', {
+		$http.post('/api/contacts', {
 	        name: $scope.getCurrentUser().name,
 	        messageDate:$scope.d,
 	        message: $scope.comment}).success(function(data){console.log("data-entry-made")

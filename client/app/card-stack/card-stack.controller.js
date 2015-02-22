@@ -22,7 +22,7 @@ angular.module('snckcoApp')
               return array;
         };
 
-        $http.get('http://localhost:9000/api/cards2s').success(function(data) {
+        $http.get('/api/cards2s').success(function(data) {
             var userCards = Auth.getCurrentUser().cardnames;
                 $scope.cards = _.where(data, function(card) {
                     return _.indexOf(userCards, card.name) === -1;
@@ -80,7 +80,7 @@ angular.module('snckcoApp')
             $scope.d = new Date();
 
 
-            $http.post('http://localhost:9000/votes', {
+            $http.post('/votes', {
                 name: $scope.nameFood,
                 swipeYes: $scope.swipeYes,
                 swipeNo: $scope.swipeNo,
