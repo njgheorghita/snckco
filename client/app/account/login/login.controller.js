@@ -30,6 +30,7 @@ angular.module('snckcoApp')
         console.log(asdf,"afsda");
       })
       .catch(function(err){
+        console.log('error=');
         console.error(err);
       })
     };

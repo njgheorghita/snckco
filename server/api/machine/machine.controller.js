@@ -5,6 +5,7 @@ var Machine = require('./machine.model');
 
 // Get list of Machines
 exports.index = function(req, res) {
+    console.log('methodtest');
   Machine.find(function (err, Machines) {
     if(err) { return handleError(res, err); }
     return res.json(200, Machines);

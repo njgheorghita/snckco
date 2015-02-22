@@ -1,25 +1,65 @@
-
+p {
+	color: #3399FF;
+}
 
 .header {
 	font-size: 3em;
 	color: #85B4FF;
-	margin-top: 100px;
 	line-height: 50px;
 }
 
 .greeting {
-	margin-top: 100px;
-	font-size: 2em;
+	padding-top: 175px;
+	font-size: 4em;
+	font-family: lobster;
+	color: #3399FF;
+	margin-bottom: 40px;
 }
 
 .main {
-	margin-top: 100px;
 	font-size: 2em;
 }
 
-.navbar {
-	}
+.list{
+	font-size: 1em;
+}
+
+li{
+list-style-type: none;
+}
 
 .p {
 	font-size: 2em;
+}
+
+.emailsss {
+	font-size: 2em;
+}
+
+.classsy {
+	font-size: 2em;
+}
+
+.killing {
+	font-size: 3em;
+	font-family: lobster;
+	color: #3399FF;
+}
+
+.mymachines {
+	line-height: 30px;
+}
+
+.machineInfo {
+	font-size: 2em;
+	font-weight: 100;
+}
+
+.glyphicon{
+	font-size: 1.3em;
+	vertical-align: text-bottom;
+}
+
+.fancyPrint{
+	font-family: lobster;
 }

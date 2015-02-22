@@ -1,1 +1,24 @@
+input.form-control {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
 
+button.btn.btn-inverse.btn-lg.btn-login {
+	font-size: 2em;
+}
+
+.form-control {
+	text-align: center;
+}
+
+.form {
+	margin-top: 20px;
+}
+
+.facebook {
+	font-size: 2em;
+	background-color: #3399FF;
+	border-radius: 8px;
+	color: white;
+}

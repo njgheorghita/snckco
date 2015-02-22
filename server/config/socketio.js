@@ -18,6 +18,11 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/cards2/cards2.socket').register(socket);
+  require('../api/comment/comment.socket').register(socket);
+  require('../api/votes/votes.socket').register(socket);
+  require('../api/card-stack/card-stack.socket').register(socket);
+  require('../api/contact/contact.socket').register(socket);
   require('../api/showdown/showdown.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }

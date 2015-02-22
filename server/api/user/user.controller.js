@@ -80,6 +80,29 @@ exports.changePassword = function(req, res, next) {
 };
 
 /**
+ * add machineID
+ */
+// Updates an existing cards2 in the DB.
+exports.addMachine = function(req, res) {
+  console.log('errortag');
+  var machineId = req.body.machineId;
+  var userId = req.params.id;
+  User.findByIdAndUpdate(
+    userId, 
+    {$push: {machineIds: machineId}},
+    {},
+    function(err, model) {
+      if (err) {
+        console.log(err);
+        res.send(400);
+      }else{
+        res.send(200);
+      }
+    });
+};
+
+
+/**
  * Get my info
  */
 exports.me = function(req, res, next) {

@@ -1,23 +1,26 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
-
 <div class = "header">
 	<p>
 		Enter your machine code here to vote.
 	</p>
-	<input type="text" placeholder="code"/>
+	<input type="text" placeholder=". . . . ." class="form-control, booty" data-ng-model="machineId" maxlength="5"/>
+</div>
+<br>
+<div class="errorMessage">
+	{{errorMessage}}
 </div>
 
+
 <div>
-	<a href="/card-stack">
-		<button class="butt">
+	<a>
+		<button class="butt" type="submit" ng-click="submitButton()">
 			Go
 		</button>
 	</a>
 </div>
 
+
 <footer class="footer">
   <div class="container">
-      <p>Welcome to snck.co</p>
+      <p><a href="/main"> welcome to snck.co</a> | <a href="/contact">contact</a></p>
   </div>
 </footer>

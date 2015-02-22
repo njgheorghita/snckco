@@ -5,8 +5,8 @@ var mongoose = require('mongoose'),
 
 var ThingSchema = new Schema({
   name: String,
-  info: String,
-  active: Boolean
+  message: String,
+
 });
 
 module.exports = mongoose.model('Thing', ThingSchema);

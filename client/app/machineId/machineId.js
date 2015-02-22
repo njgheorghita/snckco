@@ -4,7 +4,7 @@ angular.module('snckcoApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('machineId', {
-        url: '/machineId',
+        url: '/',
         templateUrl: 'app/machineId/machineId.html',
         controller: 'MachineIdCtrl'
       });

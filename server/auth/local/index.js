@@ -5,6 +5,7 @@ var passport = require('passport');
 var auth = require('../auth.service');
 var app = express();
 var router = express.Router();
+var User = require('../../api/user/user.model');
 
 
 
@@ -14,8 +15,7 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-    db.users.findById(id, function(err, user){
-        console.log(user)
+    User.findById(id, function(err, user){
         if(!err) done(null, user);
         else done(err, null)  
     })
@@ -23,6 +23,7 @@ passport.deserializeUser(function(id, done) {
 
 
 router.post('/', function(req, res, next) {
+  console.log('string-anythings');
   passport.authenticate('local', function (err, user, info) {
     var error = err || info;
     if (error) return res.json(401, error);
@@ -33,15 +34,17 @@ router.post('/', function(req, res, next) {
   })(req, res, next)
 });
 
-router.get('/auth/facebook', passport.authenticate('facebook',function(){
+router.get('/auth/facebook', passport.authenticate('facebook', function (err, user, info){
+  console.log(info);
   var token = auth.signToken(user._id,user.role);
-  res.json({token:token});
-}));
+  res.json({token:token});},
+  {scope: ['email']}
+  ));
 
 router.get('/auth/facebook/callback', 
-  passport.authenticate('facebook', { successRedirect: '/success',
+  passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
-
+  
 router.get('/success',function(req,res){
   console.log("redireced to the",req.user);
   res.json(req.user);

@@ -39,3 +39,37 @@
     color: #000;
     padding: 0.2em 0;
 }
+
+
+/*:not(.nav).ng-scope {
+    padding-top: 300px;
+}*/
+
+
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #E5E5E5;
+}
+
+body{
+  font-family:'Open Sans', verdana, sans-serif;
+ /* background:#FFFFFF;*/
+  color:#eee;
+  font-size:12px;
+  color: #85B4FF;
+}
+
+.btn{
+  width: 25em;
+  height: 25em;
+  border-width: 10px;
+  border-style: solid;
+  border-radius:10px;
+  border-color: white;
+  padding:30px;
+  font-size:12px;
+  margin-bottom:15px;
+}

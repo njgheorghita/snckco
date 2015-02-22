@@ -43,12 +43,12 @@ angular.module('snckcoApp')
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
-        $http.get('/auth/local/auth/facebook').
+        $http.get('/loggedin').
         success(function(data) {
           $cookieStore.put('token', data.token);
-          currentUser = User.get();
+          currentUser = data;
           deferred.resolve(data);
-          return cb();
+          return cb(data);
         }).
         error(function(err) {
           this.logout();
@@ -64,6 +64,7 @@ angular.module('snckcoApp')
        * @param  {Function}
        */
       logout: function() {
+        $http.get('/logout')
         $cookieStore.remove('token');
         currentUser = {};
       },
@@ -126,8 +127,29 @@ angular.module('snckcoApp')
        * @return {Boolean}
        */
       isLoggedIn: function() {
-        return currentUser.hasOwnProperty('role');
-      },
+        var deferred = $q.defer();
+        $http.get('/loggedin').
+        success(function(data) {
+          if(data==0){
+            currentUser = {};
+            return false;
+          }
+          currentUser = data;
+        })
+        .then(function(){
+          deferred.resolve(currentUser.hasOwnProperty('role'));
+          return currentUser.hasOwnProperty('role');
+        })
+       return deferred.promise;      
+     },
+
+     loggedIn: function() {
+      return currentUser && currentUser.cardnames;
+     },
+
+     refresh: function() {
+      currentUser = User.get();
+     },
 
       /**
        * Waits for currentUser to resolve before checking if user is logged in

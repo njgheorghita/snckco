@@ -1,12 +1,8 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
-
-
-<div ng-controller="MyAccountCtrl">	
+<div class="widthtest" ng-controller="MyAccountCtrl">	
 
 		<div class="greeting">
 			<p>
-				Hello _______. 
+				Hey {{ getCurrentUser().name }}. 
 			</p>
 		</div>
 
@@ -14,26 +10,29 @@
 				<button class="p" ng-click="hello = !hello;">
 					mymachines
 				</button>
-
-				<div ng-show="!hello">
-					<p>
-						mymachines info
-						mymachines info
-						mymachines info
-					</p>
+				<div class="machineInfo">
+					<div ng-show="!hello">
+						<p>
+							<li class="list" ng-repeat="machines in getCurrentUser().machineIds">
+							 {{machines}} 		<br>
+							<a href="/card-stack">
+							<span class="fancyPrint">go to votes </span><span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+							<br>
+							<a href="/">
+							<span class="glyphicon glyphicon-plus-sign"></span> <span class="fancyPrint">add a machine</span></a>
+						</p>
+					</div>
 				</div>
 			</div>
 
-			<div class="sncks">
-				<button class="p" ng-click="sncks = !sncks;">
-					mysncks
+			<div class="votes">
+				<button class="p" ng-click="votes = !votes;">
+					myvotes
 				</button>
 
-				<div ng-show="!sncks">
+				<div class="classsy" ng-show="!votes">
 					<p>
-						mysncks info
-						mysncks info
-						mysncks info
+						Local snck Showcase votes coming soon. 
 					</p>
 				</div>
 			</div>
@@ -43,12 +42,34 @@
 					account
 				</button>
 
-				<div ng-show="!account">
+				<div class="emailsss" ng-show="!account">
 					<p>
-						account settings info
-						account settings info
-						account settings info
+						email: {{ getCurrentEmail().email }}
 					</p>
+				</div>
+			</div>
+			<div class="feedback">
+				<button class="p" ng-click="feedback = !feedback;">
+					holler at us
+				</button>
+
+				<div ng-show="!feedback">
+					<form>
+						<div ng-hide"inputValue" class="ng-hide">
+						</div>
+						<div ng-hide="inputValue">
+							<p style="color:#3399FF; font-size: 2em;"> Leave any feedback, snck requests or professions of love. </p>
+							<br>
+							<input type="text" class="form-control" data-ng-model="comment" style="width: 50%; margin-left: auto; margin-right: auto; text-align:center;">
+							<br>
+							<br>
+							<input type="submit" class="clear" value="submit" ng-click="savedata(); comment=''" style="width: 100px; height: 50px;">
+						</div>
+						<br>
+							<div ng-hide"myValue" class="ng-hide"></div>
+							<div ng-hide="myValue" class="killing">{{thankYous[0]}}</div>
+						
+					</form>
 				</div>
 			</div>
 
@@ -63,17 +84,6 @@
 
 <footer class="footer">
   <div class="container">
-      <p>Welcome to snck.co</p>
+      <p><a href="/main"> welcome to snck.co</a> | <a href="/contact">contact</a></p>
   </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-

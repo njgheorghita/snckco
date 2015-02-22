@@ -1,0 +1,11 @@
+.info {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 150px;
+}
+
+.url {
+	font-size: 2em;
+	line-height: 40px;
+}

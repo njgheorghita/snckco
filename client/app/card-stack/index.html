@@ -1,24 +1,24 @@
-<div ng-include="'components/navbar/navbar.html'">
+<div  ng-app="snckcoApp" ng-controller="Card-stackCtrl">
+    <div class="entirety">
+        <div id="moreLike">
+       
+        <strong>I want sncks like . . . 
+        
+    
 
-</div>
-
-
-<head>
-
- <script src="./card-stack.controller.js"></script>   
-</head>
-<body ng-app="snckcoApp" ng-controller="Card-stackCtrl">
-    <div id="moreLike">
-        <p>I want MORE sncks like. . .</p>
     </div>
-    <div id="swipeRight">
-        <p>Swipe Right --> </p>
-    </div>
+
     <div id="viewport">
+
+        <div class="comeBackSoon">
+            That's it for now. Check back soon for more sncks!
+        </div>
+
         <ul class="stack" swing-stack>
             <li class="card" 
                     swing-card
-                    swing-on-throwout="throwout(eventName, eventObject)"
+                    swing-on-throwout="throwout(eventName, eventObject); remove(cards,$index)"
+
                     swing-on-throwoutleft="throwoutleft(eventName, eventObject)"
                     swing-on-throwoutright="throwoutright(eventName, eventObject)"
                     swing-on-throwin="throwin(eventName, eventObject)"
@@ -27,38 +27,42 @@
                     swing-on-dragend="dragend(eventName, eventObject)"
                     ng-repeat="card in cards track by $index" ng-class="{'flipped':isFlipped}" >
                         
-
+                    <!--ng-repeat="card in cards filter: {price: '$0.50'} track by $index" ng-class="{'flipped':isFlipped}"-->
                         <div class="face front">
-                            <img ng-src="./../../assets/images/{{card.name}}.jpg" width="350" height="350"></img>
-                            <div>
-                            <button ng-click="isFlipped=!isFlipped">flip</button>
+                            <p class="card" swing-stack>
+                            <button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign"></span></button>
+                            </p>
+                                <img ng-src="./../../assets/images/{{card.name}}.jpg" class="img-responsive" width="350" height="300"></img>
+                                <div class="properName" style="line-height: 1em;">{{card.proper}}</div>
+                                <span class="texticle" style="margin-top:9em;">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span>swipe</span>
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </span>                                
+                                <div class="locallyMade" ng-show="card.local == 'True'"> 
+                                    <img ng-src="./../../assets/images/kcMade2.jpg" width="100" height ="100" style="margin-left: .2em"></img>
+                                </div>
+                            
                         </div>
-                        </div>
+
                         <div class="face back">
-                            <p>{{card.proper}}</p>
-                            <p>{{card.price}}</p>
-                            <p>Calories: {{card.calories}}</p>
-                            <div>
-                            <button ng-click="isFlipped=!isFlipped">flip</button>
+                                <div>
+                            <button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-ok-sign"></span></button>
                         </div>
+                            <p>{{card.price}}</p>
+                            <p>{{card.description}}</p>
+                            
                         </div>
           
             </li>
 
         </ul>
     </div> 
-    <div id="lessLike">
-        <button ng-click="throwoutleft(li.card.ng-scope.ng-isolate-scope, -1)">
-        <strong>I want LESS sncks like. . .</strong>
-    </button>
-    </div>
-    <div id="swipeLeft">
-        <p>  Swipe Left</p>
-    </div>
-</body>
+</div>
+
 
 <footer class="footer">
   <div class="container">
-      <p>Welcome to snck.co</p>
+      <p><a href="/main"> welcome to snck.co</a> | <a href="/contact">contact</a></p>
   </div>
 </footer>

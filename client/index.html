@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <title>snck.co</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -24,11 +25,9 @@
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/card-stack/card-stack.css">
+      <link rel="stylesheet" href="app/contact/contact.css">
       <link rel="stylesheet" href="app/machineId/machineId.css">
-      <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/myAccount/myAccount.css">
-      <link rel="stylesheet" href="app/showdown/showdown.css">
-      <link rel="stylesheet" href="app/showdownbackup/showdown.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -37,6 +36,7 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div ng-include="'components/navbar/navbar.html'"></div>
 
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
@@ -83,15 +83,13 @@
           <script src="app/admin/admin.js"></script>
           <script src="app/card-stack/card-stack.controller.js"></script>
           <script src="app/card-stack/card-stack.js"></script>
+          <script src="app/contact/contact.controller.js"></script>
+          <script src="app/contact/contact.js"></script>
           <script src="app/machineId/machineId.controller.js"></script>
           <script src="app/machineId/machineId.js"></script>
-          <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
+          <script src="app/machineService/machineService.service.js"></script>
           <script src="app/myAccount/myAccount.controller.js"></script>
           <script src="app/myAccount/myAccount.js"></script>
-          <script src="app/showdown/showdown.controller.js"></script>
-          <script src="app/showdown/showdown.js"></script>
-          <script src="app/showdownbackup/showdown.controller.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/modal/modal.service.js"></script>

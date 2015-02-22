@@ -1,0 +1,13 @@
+     [{   
+     	"machineId":"J3AN3",
+     	"location":"PHS Bookstore"
+     },{
+          "machineId":"JVNE",
+          "location":"Cerner 3rd Floor"
+     },{
+          "machineId":"MYL33",
+          "location":"W&M Botetourt Basement"
+     },{
+          "machineId":"NO3L",
+          "location":"Apple Headquarters 18th Floor"
+     }]

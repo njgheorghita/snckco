@@ -4,9 +4,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var MachineSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  machineId: String,
+  location: String
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);

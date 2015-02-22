@@ -1,11 +1,17 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Sign up</h1>
+      <h1 style="color:#3399FF; font-family: lobster; font-size: 5em; margin-bottom: 25px;">Sign up</h1>
+            <!--button class='btn' ng-click="fbLogin()">Login with Facebook</button-->
+            <!--a href="/auth/local/auth/facebook" target="_self" class="facebook btn" style="border: 0px; height: auto; width: auto; font-size: 2em; font-family: lobster;">with Facebook</a-->
+        <a href="" target="_self" class="facebook btn" style="border: 0px; height: auto; width: auto; font-size: 2em; font-family: lobster;">with Facebook</a>     
+        <a href="" target="_self" class="facebook btn" style="border: 0px; height: auto; width: auto; font-size: 2em; font-family: lobster;">with Twitter</a>
+      <br>
+      <br>
+      <p style="font-size: 2em;"> Or create a Snck.Co account to keep voting for your favorite sncks.</p>
     </div>
     <div class="col-sm-12">
+
       <form class="form" name="form" ng-submit="register(form)" novalidate>
 
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
@@ -53,14 +59,12 @@
             {{ errors.password }}
           </p>
         </div>
-
+        <br>
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
-            Sign up
+          <button class="btn btn-inverse btn-lg btn-login" type="submit" style="height: auto; width: auto; border: 2px solid #3399FF; background-color: #3399FF; color: white; font-family:lobster;">
+            Create Account
           </button>
-          <a class="btn btn-default btn-lg btn-register" href="/login">
-            Login
-          </a>
+
         </div>
 
       </form>
