@@ -25,7 +25,8 @@
     "socket.io-client": "^1.0.6",
     "socketio-jwt": "^2.0.2",
     "cors": "latest",
-    "passport-facebook": "~1.0.3"
+    "passport-facebook": "~1.0.3",
+    "bower": "latest"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
@@ -87,7 +88,8 @@
   "scripts": {
     "start": "node server/app.js",
     "test": "grunt test",
-    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
+    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "private": true
 }
