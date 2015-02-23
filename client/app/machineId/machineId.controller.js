@@ -39,7 +39,7 @@ angular.module('snckcoApp')
 						break;
 					}
 				}else{
-
+					$location.path('/card-stack');
 				}
 			} else {
 				$scope.errorMessageId = "that's not right";

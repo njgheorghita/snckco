@@ -24,7 +24,7 @@
                     swing-on-throwin="throwin(eventName, eventObject)"
                     swing-on-dragstart="dragstart(eventName, eventObject)"
                     swing-on-dragmove="dragmove(eventName, eventObject, $scope)"
-                    swing-on-dragend="dragend(eventName, eventObject)"
+                    swing-on-dragend="dragend(eventName, eventObject);"
                     ng-repeat="card in cards track by $index" ng-class="{'flipped':isFlipped}" >
                         
                     <!--ng-repeat="card in cards filter: {price: '$0.50'} track by $index" ng-class="{'flipped':isFlipped}"-->
@@ -63,6 +63,6 @@
 
 <footer class="footer">
   <div class="container">
-      <p><a href="/main"> welcome to snck.co</a> | <a href="/contact">contact</a></p>
+      <p><a> welcome to snck.co</a> | <a href="/contact">contact</a></p>
   </div>
 </footer>

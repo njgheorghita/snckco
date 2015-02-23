@@ -24,7 +24,7 @@
   }
 
   div.navbar.transition {
-    height: 100%;
+    height: 1000px;
   }
 
   div .navbar-main {
@@ -67,6 +67,10 @@
     color:black;
   }
 
+  .navbar-collapse.in {
+    min-height:100px;
+    background-color: black;
+  }
 
 
  
@@ -85,14 +89,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <!--<ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
-        </li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
-      </ul>-->
-
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main" data-toggle="collapse" data-target=".navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="Auth.loggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup" style="border: 2px solid white; margin-left: 110px;">Sign up</a></li>
         <li ng-hide="Auth.loggedIn()" ng-class="{active: isActive('/login')}"><a href="/login" style="border: 2px solid white; margin-right: -50px; ">Login</a></li>
