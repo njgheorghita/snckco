@@ -45,10 +45,9 @@ angular.module('snckcoApp')
 	"Snck like nobody's watching.",
 	"You're beautiful, thanks.",
 	"Feedback is tight. Thank you.",
+	"We predict free sncks in your future",
 	"#sncksareback",
-	"sncks are back",
-	"Baby's got snck.",
-	"Back in snck."];
+	"Baby's got snck."];
 
 	$scope.savedata = function () {
 		$scope.myValue = false;

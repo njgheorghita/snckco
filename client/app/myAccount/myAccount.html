@@ -13,7 +13,7 @@
 				<div class="machineInfo">
 					<div ng-show="!hello">
 						<p>
-							<li class="list" ng-repeat="machines in getCurrentUser().machineIds">
+							<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index">
 							 {{machines}} 		<br>
 							<a href="/card-stack">
 							<span class="fancyPrint">go to votes </span><span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
@@ -58,7 +58,7 @@
 						<div ng-hide"inputValue" class="ng-hide">
 						</div>
 						<div ng-hide="inputValue">
-							<p style="color:#3399FF; font-size: 2em;"> Leave any feedback, snck requests or professions of love. </p>
+							<p style="color:#3399FF; font-size: 2em; width: 50%; margin-left:auto; margin-right:auto; line-height: 1em;"> Feedback makes us better at what we do.<br> Leave any here along with snck requests or professions of love. </p>
 							<br>
 							<input type="text" class="form-control" data-ng-model="comment" style="width: 50%; margin-left: auto; margin-right: auto; text-align:center;">
 							<br>

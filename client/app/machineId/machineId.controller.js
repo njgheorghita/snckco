@@ -19,29 +19,33 @@ angular.module('snckcoApp')
 
 		machineService.setSetId($scope.upperMachineId);
 
-
-		
 		for (var i = 0; i < $scope.machineIdentification.length; i++) {
-			if ($scope.upperMachineId == $scope.machineIdentification[i].machineId) {
-				if ($scope.getCurrentUser.name != undefined) { 
-					console.log($scope.getCurrentUser.id,$scope.getCurrentUser._id);
-					//this is where you need to push machineid to current user array if it doesn't match existing id
-					//if it matches existing id, take you straight to home page
-					console.log('doodoodooodooodoo');
-					$http.put('/api/users/api/' + $scope.getCurrentUser._id + '/addMachine', {machineId: $scope.upperMachineId})
-					.success(function() {
-						// refresh the locally cached user
-						Auth.refresh();
-					});
-				}else {
-					//machine id is saved in service & you have to extract it later
+				//it's a valid machineId && somebody is logged in
+
+			if ($scope.machineIdentification[i].machineId == $scope.upperMachineId) {
+
+				if ($scope.getCurrentUser.name != undefined) {
+
+					if ($scope.getCurrentUser.machineIds == $scope.upperMachineId) {
+						$scope.errorMessageId = "You've already registered that machine";
+						break;
+					} else {
+						$http.put('/api/users/api/' + $scope.getCurrentUser._id + '/addMachine', {machineId: $scope.upperMachineId})
+						.success(function() {
+							// refresh the locally cached user
+							Auth.refresh();
+						});
+						$location.path('/card-stack');
+						break;
+					}
+				}else{
+
 				}
-				$location.path("/card-stack");
-				break;
 			} else {
-				$scope.machineId = '';
-				$scope.errorMessage = "that's not right";
+				$scope.errorMessageId = "that's not right";
 			}
 		};
+		$scope.machineId = '';
+		$scope.errorMessage = $scope.errorMessageId;
 	};
-	});
+});
