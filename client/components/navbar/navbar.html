@@ -96,7 +96,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="Auth.loggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup" style="border: 2px solid white; margin-left: 110px;">Sign up</a></li>
         <li ng-hide="Auth.loggedIn()" ng-class="{active: isActive('/login')}"><a href="/login" style="border: 2px solid white; margin-right: -50px; ">Login</a></li>
-        <!--<li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>-->
         <li ng-show="Auth.loggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()" style="border: 2px solid white; margin-left: 120px;">Logout</a></li>
         <li ng-show="Auth.loggedIn()" ng-class="{active: isActive('/myaccount')}"><a href="/myaccount" style="border: 2px solid white; margin-right: -60px;">Home</a></li>
       </ul>

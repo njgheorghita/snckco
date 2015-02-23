@@ -125,7 +125,6 @@ angular.module('snckcoApp')
        * Check if a user is logged in
        *
        * @return {Boolean}
-       */
       isLoggedIn: function() {
         var deferred = $q.defer();
         $http.get('/loggedin').
@@ -142,6 +141,7 @@ angular.module('snckcoApp')
         })
        return deferred.promise;      
      },
+       */
 
      loggedIn: function() {
       return currentUser && currentUser.cardnames;

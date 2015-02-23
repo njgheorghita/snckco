@@ -47,11 +47,6 @@ angular.module('snckcoApp')
 
     $scope.isCollapsed = true;
 
-
-    Auth.isLoggedIn().then(function(data){
-      $scope.isLoggedIn = data
-    })
-
     $scope.Auth = Auth;
 
     $scope.isAdmin = Auth.isAdmin;
@@ -59,10 +54,6 @@ angular.module('snckcoApp')
 
     $scope.logout = function() {
       Auth.logout();
-      Auth.isLoggedIn().then(function(data){
-        console.error("what is coming as response",data);
-        $scope.isLoggedIn = data
-      })
       $location.path('/login');
     };
 
