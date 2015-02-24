@@ -81,13 +81,18 @@ angular.module('snckcoApp')
             if (eventObject.throwDirection == 1) {
                 $scope.swipeYes = 1;
                 $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeYes');
-                console.log($scope.currentTotalSwipes);
                 $scope.currentTotalSwipes ++;
-                $
+                
+                $http.put('/api/cards2s/' + $scope.getCurrentUser._id, {"name":$scope.nameFood})
+                    .success(function() {
+                        swipeYes: $scope.currentTotalSwipes;
+                    })
+                    .error(console.log('errorrrrr'));
             } else if (eventObject.throwDirection == -1) {
                 $scope.swipeNo = 1;
                 $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeNo');
                 console.log($scope.currentTotalSwipes);
+                $scope.currentTotalSwipes ++;
             };
 
 
