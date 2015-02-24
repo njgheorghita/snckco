@@ -24,6 +24,7 @@ angular.module('snckcoApp')
 
         $http.get('/api/cards2s').success(function(data) {
             var userCards = Auth.getCurrentUser().cardnames;
+            $scope.cardsFull = data;
                 $scope.cards = _.where(data, function(card) {
                     return _.indexOf(userCards, card.name) === -1;
                 });
@@ -39,6 +40,7 @@ angular.module('snckcoApp')
             $scope.voteTally ++;
             $scope.swipeYes = 0;
             $scope.swipeNo = 0;
+            $scope.currentTotalSwipes = 0;
             console.log('bigtesthere', $scope.cardsFilter);
             if ($scope.voteTally == 3 && $scope.getCurrentUser == undefined){
                 $location.path("/signup");
@@ -75,6 +77,20 @@ angular.module('snckcoApp')
             } else if (eventObject.target.outerText.indexOf("Wedding") > -1) {
                 $scope.nameFood = 'hungryMonkeyWedding';
             };
+
+            if (eventObject.throwDirection == 1) {
+                $scope.swipeYes = 1;
+                $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeYes');
+                console.log($scope.currentTotalSwipes);
+                $scope.currentTotalSwipes ++;
+                $
+            } else if (eventObject.throwDirection == -1) {
+                $scope.swipeNo = 1;
+                $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeNo');
+                console.log($scope.currentTotalSwipes);
+            };
+
+
 
             console.log($scope.nameFood, Auth.getCurrentUser().name);
             $scope.d = new Date();

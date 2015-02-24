@@ -20,7 +20,6 @@ angular.module('snckcoApp')
 		machineService.setSetId($scope.upperMachineId);
 
 		for (var i = 0; i < $scope.machineIdentification.length; i++) {
-				//it's a valid machineId && somebody is logged in
 
 			if ($scope.machineIdentification[i].machineId == $scope.upperMachineId) {
 
@@ -39,7 +38,7 @@ angular.module('snckcoApp')
 						break;
 					}
 				}else{
-					$location.path('/card-stack');
+					$location.path('/signup');
 				}
 			} else {
 				$scope.errorMessageId = "that's not right";

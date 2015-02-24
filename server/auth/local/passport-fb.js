@@ -7,7 +7,7 @@ exports.setup = function (User, config) {
   passport.use(new FacebookStrategy({
     clientID: '763571913759952',
     clientSecret: '887aac4b7e30a6df40e11442d52b6211',
-    callbackURL: "http://localhost:9000/auth/local/auth/facebook/callback",
+    callbackURL: "/auth/local/auth/facebook/callback",
     profileFields: ['id', 'displayName', 'emails']
   },
   function(accessToken, refreshToken, profile, done) {

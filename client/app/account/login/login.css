@@ -22,3 +22,7 @@ button.btn.btn-inverse.btn-lg.btn-login {
 	border-radius: 8px;
 	color: white;
 }
+.disclaimer {
+	font-size: 1em;
+	color: gray;
+}
