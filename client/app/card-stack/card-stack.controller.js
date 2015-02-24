@@ -78,8 +78,8 @@ angular.module('snckcoApp')
 
             console.log($scope.nameFood, Auth.getCurrentUser().name);
             $scope.d = new Date();
+            console.log('votetally', $scope.voteTally);
 
-            
             $http.post('/votes', {
                 name: $scope.nameFood,
                 swipeYes: $scope.swipeYes,
