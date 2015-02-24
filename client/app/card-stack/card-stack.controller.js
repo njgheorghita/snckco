@@ -33,8 +33,8 @@ angular.module('snckcoApp')
 
 
 
-        $scope.throwout = function (eventName, eventObject) {
-            console.log('throwout', eventObject);
+        $scope.throwout = function (eventName, eventObject, $index) {
+            console.log('throwout', eventObject, $scope.cards[$index]);
 
             $scope.getCurrentUser= Auth.getCurrentUser().name;
             $scope.voteTally ++;
@@ -82,17 +82,22 @@ angular.module('snckcoApp')
                 $scope.swipeYes = 1;
                 $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeYes');
                 $scope.currentTotalSwipes ++;
-                
-                $http.put('/api/cards2s/' + $scope.getCurrentUser._id, {"name":$scope.nameFood})
+
+                $http.put('/api/cards2s/' + $scope.cards[$index]._id, {"name":$scope.nameFood, "swipeYes": $scope.currentTotalSwipes})
                     .success(function() {
-                        swipeYes: $scope.currentTotalSwipes;
+                        var swipeYes = $scope.currentTotalSwipes;
                     })
                     .error(console.log('errorrrrr'));
             } else if (eventObject.throwDirection == -1) {
                 $scope.swipeNo = 1;
                 $scope.currentTotalSwipes = _.pluck(_.where($scope.cardsFull, {'name' : $scope.nameFood}), 'swipeNo');
-                console.log($scope.currentTotalSwipes);
                 $scope.currentTotalSwipes ++;
+                
+                $http.put('/api/cards2s/' + $scope.cards[$index]._id, {"name":$scope.nameFood, "swipeNo": $scope.currentTotalSwipes})
+                    .success(function() {
+                        var swipeNo = $scope.currentTotalSwipes;
+                    })
+                    .error(console.log('errorrrrr'));
             };
 
 

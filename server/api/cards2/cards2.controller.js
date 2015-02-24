@@ -45,6 +45,7 @@ exports.update = function(req, res) {
     if (err) { return handleError(res, err); }
     if(!cards2) { return res.send(404); }
     var updated = _.merge(cards2, req.body);
+    console.log("updated test", updated);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
       return res.json(200, cards2);

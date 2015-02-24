@@ -61,9 +61,9 @@ var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,
   path: '/socket.io-client'
 });
-app.get('/loggedin', function(req, res) {
-   res.send(req.isAuthenticated() ? req.user : '0');
- });
+//app.get('/loggedin', function(req, res) {
+//   res.send(req.isAuthenticated() ? req.user : '0');
+// });
 // app.get('/logout', function(req,res){
 //   req.logout();
 //   res.json(true);
