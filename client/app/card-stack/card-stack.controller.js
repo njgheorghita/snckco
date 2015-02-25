@@ -34,14 +34,11 @@ angular.module('snckcoApp')
 
 
         $scope.throwout = function (eventName, eventObject, $index) {
-            console.log('throwout', eventObject, $scope.cards[$index]);
-
             $scope.getCurrentUser= Auth.getCurrentUser().name;
             $scope.voteTally ++;
             $scope.swipeYes = 0;
             $scope.swipeNo = 0;
             $scope.currentTotalSwipes = 0;
-            console.log('bigtesthere', $scope.cardsFilter);
             if ($scope.voteTally == 3 && $scope.getCurrentUser == undefined){
                 $location.path("/signup");
             };
@@ -74,9 +71,7 @@ angular.module('snckcoApp')
                     .error(console.log('errorrrrr'));
             };
 
-            console.log($scope.nameFood, Auth.getCurrentUser().name);
             $scope.d = new Date();
-            console.log('votetally', $scope.voteTally);
 
             $http.post('/votes', {
                 name: $scope.nameFood,
@@ -84,7 +79,6 @@ angular.module('snckcoApp')
                 swipeNo: $scope.swipeNo,
                 timeanddate: $scope.d,
                 userId: $scope.getCurrentUser }).success(function(data){
-                    console.log("data-entry-made");
                     Auth.refresh();
             });
 

@@ -14,7 +14,6 @@ angular.module('snckcoApp')
 
 
 	$scope.submitButton = function() {
-		console.log($scope.machineId);
 		$scope.upperMachineId = $scope.machineId.toUpperCase();
 
 		machineService.setSetId($scope.upperMachineId);
