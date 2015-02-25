@@ -111,17 +111,7 @@ angular.module('snckcoApp')
             console.log('throwin', eventObject);
         };
 
-        $scope.dragstart = function (eventName, eventObject) {
-            console.log('dragstart', eventObject);
-        };
 
-        $scope.dragmove = function (eventName, eventObject) {
-            console.log('dragmove', eventObject);
-        };
-        
-        $scope.dragend = function (eventName, eventObject) {
-            console.log('dragend', eventObject);
-        };
     })
 ;
 

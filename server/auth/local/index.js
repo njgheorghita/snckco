@@ -41,9 +41,18 @@ router.get('/auth/facebook', passport.authenticate('facebook', function (err, us
   {scope: ['email']}
   ));
 
-router.get('/auth/facebook/callback', 
-  passport.authenticate('facebook', { successRedirect: '/',
-                                      failureRedirect: '/login' }));
+router.get('/auth/facebook/callback', function(req, res, next) {
+  passport.authenticate('facebook', function(err, user, info) {
+    if (err) { next(err); }
+    if (!user) { res.redirect('/login'); }
+    auth.setTokenCookie(req, res);
+    res.redirect('/');
+  })(req, res, next);  
+})
+
+// router.get('/auth/facebook/callback', 
+//   passport.authenticate('facebook', { successRedirect: '/',
+//                                       failureRedirect: '/login' }));
   
 router.get('/success',function(req,res){
   console.log("redireced to the",req.user);

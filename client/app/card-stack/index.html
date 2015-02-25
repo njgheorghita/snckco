@@ -21,9 +21,6 @@
                     swing-on-throwoutleft="throwoutleft(eventName, eventObject)"
                     swing-on-throwoutright="throwoutright(eventName, eventObject)"
                     swing-on-throwin="throwin(eventName, eventObject)"
-                    swing-on-dragstart="dragstart(eventName, eventObject)"
-                    swing-on-dragmove="dragmove(eventName, eventObject, $scope)"
-                    swing-on-dragend="dragend(eventName, eventObject);"
                     ng-repeat="card in cards track by $index" ng-class="{'flipped':isFlipped}" >
 
                         <div class="face front">
@@ -45,7 +42,7 @@
                                     <span class="texticle">
                                         <span class="glyphicon glyphicon-chevron-left"></span>
                                             <span>swipe</span>
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="glyphicon glyphicon-chevron-right" ng-click="throwout(null, {throwDirection: 1}, $index)"></span>
                                     </span>   
                                 </div>
                                     
