@@ -90,9 +90,7 @@ angular.module('snckcoApp')
 
             for (var i=0; i < $scope.cards.length; i++){
                 if ($scope.cards[i].name === $scope.nameFood) {
-                    console.log($scope.nameFood);
                     $scope.cards[i].swipeYes ++;
-                    console.log($scope.cards[i].swipeYes);
                 }
             };
 
