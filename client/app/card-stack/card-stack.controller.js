@@ -46,37 +46,11 @@ angular.module('snckcoApp')
                 $location.path("/signup");
             };
 
-            if (eventObject.throwDirection == 1) {
-                $scope.swipeYes = 1;
-            } else if (eventObject.throwDirection == -1) {
-                $scope.swipeNo = 1;
-            };
-
-            $scope.nameFood = '';
-
             $scope.remove = function(array, index) {
                 array.splice(index,1);
             };
 
-            if (eventObject.target.outerText.indexOf("Banana") > -1) {
-                $scope.nameFood = 'banana';
-            } else if (eventObject.target.outerText.indexOf("Cookies") > -1) {
-                $scope.nameFood = 'cookies';
-            } else if (eventObject.target.outerText.indexOf("Apple") > -1) {
-                $scope.nameFood = 'apple';
-            } else if (eventObject.target.outerText.indexOf("Bagel") > -1) {
-                $scope.nameFood = 'bagel';
-            } else if (eventObject.target.outerText.indexOf("Pattie") > -1) {
-                $scope.nameFood = 'milkPattie';
-            } else if (eventObject.target.outerText.indexOf("Oreo") > -1) {
-                $scope.nameFood = 'milkOreo';
-            } else if (eventObject.target.outerText.indexOf("Truffle") > -1) {
-                $scope.nameFood = 'darkTruffle';
-            } else if (eventObject.target.outerText.indexOf("Boys") > -1) {
-                $scope.nameFood = 'hungryMonkeyBad';
-            } else if (eventObject.target.outerText.indexOf("Wedding") > -1) {
-                $scope.nameFood = 'hungryMonkeyWedding';
-            };
+            $scope.nameFood = $scope.cards[$index].name;
 
             if (eventObject.throwDirection == 1) {
                 $scope.swipeYes = 1;
@@ -99,8 +73,6 @@ angular.module('snckcoApp')
                     })
                     .error(console.log('errorrrrr'));
             };
-
-
 
             console.log($scope.nameFood, Auth.getCurrentUser().name);
             $scope.d = new Date();

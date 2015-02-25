@@ -27,6 +27,11 @@ button {
 input {
   width: 50px; }
 
+.properName {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 #moreLike {
   color: #3399FF;
   font-size: 3em;
@@ -47,8 +52,8 @@ input {
 
 #viewport {
   height: 500px;
-  width:80%;
-  max-width: 500px;
+
+  max-width: 450px;
 
  /* background-image: url('./../../assets/images/vending.jpg');*/
   background-color: #EAE8E8;
@@ -67,16 +72,20 @@ input {
     left: -35px;
     margin-left: -100px;
     border-radius: 10px;
-    width: 99%;
+    width: 104%;
     height: 99%;
 
     }
 
 
   .texticle {
+    position: absolute;
     color: #85B4FF;
     font-family: lobster;
-
+    width: 100%;
+    margin-left: -50%;
+    margin-top: 10%;
+    line-height: 1em;
   }
 
   
@@ -94,26 +103,24 @@ input {
 
   .glyphicon-info-sign {
     color: #85B4FF;
-    font-size: 1em;
-    margin-right: -1em;
-    margin-top: -2em;
-    vertical-align: top;
+    font-size: 2em;
+    vertical-align: middle;
   }
 
   .glyphicon-ok-sign {
     color: #85B4FF;
-    margin-right: -350px;
+    margin-right: -60%;
     font-size: 1.5em;
     vertical-align: top;
-    margin-top: 25px;
+    margin-top: 1em;
   }
 
   #viewport .card {
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
     border-radius: 8px;
     position: absolute;
-    left: 150px;
+    left:150px;
     border-radius: 10px;
     cursor: default; 
     font-size: 1.5em;
@@ -136,10 +143,7 @@ input {
   -webkit-transition: 0.5s;
 
 }
-.locallyMade {
-  margin-right: -9em;
-  margin-top: -8em;
-}
+
 
 #viewport .stack .card .face {
 
@@ -149,6 +153,9 @@ input {
     font-size: 1.5em;
     text-align: center;
     line-height: 100px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    overflow: hidden;
 }
 #viewport .stack .card .front {
   position: absolute;

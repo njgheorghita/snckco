@@ -25,33 +25,46 @@
                     swing-on-dragmove="dragmove(eventName, eventObject, $scope)"
                     swing-on-dragend="dragend(eventName, eventObject);"
                     ng-repeat="card in cards track by $index" ng-class="{'flipped':isFlipped}" >
-                        
-                    <!--ng-repeat="card in cards filter: {price: '$0.50'} track by $index" ng-class="{'flipped':isFlipped}"-->
+
                         <div class="face front">
-                            <p class="card" swing-stack>
-                            <button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign"></span></button>
-                            </p>
-                                <img ng-src="./../../assets/images/{{card.name}}.jpg" class="img-responsive" width="350" height="300"></img>
-                                <div class="properName" style="line-height: 1em;">{{card.proper}}</div>
-                                <span class="texticle" style="margin-top:9em;">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                        <span>swipe</span>
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </span>                                
-                                <div class="locallyMade" ng-show="card.local == 'True'"> 
-                                    <img ng-src="./../../assets/images/kcMade2.jpg" width="100" height ="100" style="margin-left: .2em"></img>
+                            <p class="card" swing-stack></p>
+                                <img ng-src="./../../assets/images/{{card.name}}.jpg" class="img-responsive" style="max-height:250px;max-width:250px;"></img>
+                                <div class="properName" style="line-height: 1em;">
+                                    {{card.proper}}
                                 </div>
+
+                                <div class="locallyMade" style="position:absolute;margin-top:-70%;margin-left:-20%;">
+                                    <span ng-show="card.local == 'True'"> 
+                                        <img ng-src="./../../assets/images/kcMade2.jpg" class="img-responsive" style="height: 50%; width: 50%;border-radius:150px; "></img>
+                                    </span>
+                                    <span ng-show="card.local == 'False'">
+                                    </span>
+                                </div>
+                                    
+                                <div class="swipey">
+                                    <span class="texticle">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span>swipe</span>
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </span>   
+                                </div>
+                                    
+                                <div ng-click="isFlipped=!isFlipped" style="position:absolute; margin-top:-65%; margin-left: 80%;">
+                                    <span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span>
+                                </div>
+                                
                             
                         </div>
 
-                        <div class="face back">
-                                <div>
-                            <button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-ok-sign"></span></button>
-                        </div>
+                    <div class="face back">
+                            <div ng-click="isFlipped=!isFlipped" style="margin-right:0%;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </div>
+                        <div style="margin-top: 20%;">
                             <p>{{card.price}}</p>
                             <p>{{card.description}}</p>
-                            
                         </div>
+                    </div>
           
             </li>
 
@@ -62,6 +75,6 @@
 
 <footer class="footer">
   <div class="container">
-      <p><a> welcome to snck.co</a> | <a href="/contact">contact</a></p>
+      <p> welcome to snck.co | <a href="/contact">contact</a></p>
   </div>
 </footer>
