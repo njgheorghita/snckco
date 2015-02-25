@@ -15,7 +15,6 @@ angular.module('snckcoApp')
     };
 
     $rootScope.$on('$stateChangeStart', function (evt, toState, toParams) {
-      console.log('Navigating to state:', toState);
       if (toState.ignoreTransition) {
         delete toState.ignoreTransition;
         return;
@@ -28,7 +27,6 @@ angular.module('snckcoApp')
       $timeout(function() {
         $.extend(toState, {ignoreTransition: true});
 
-        console.log('Forcing transition to:', toState);
 
         $state.go(toState);
         $('div.navbar').removeClass('transition');
