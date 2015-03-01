@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('snckcoApp')
-	.controller('MyAccountCtrl', function ($scope, $http, Auth, machineService) {
+	.controller('MyAccountCtrl', ["$scope","$http","Auth","machineService", function ($scope, $http, Auth, machineService) {
 
 	$scope.hello = true;
 	$scope.votes = true;
@@ -147,4 +147,4 @@ angular.module('snckcoApp')
 				});
 	};
 	   
-	});
+	}]);

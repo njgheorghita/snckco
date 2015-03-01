@@ -11,6 +11,7 @@ var Cards2Schema = new Schema({
   sugar: String,
   swipeYes: Number,
   swipeNo: Number,
+  snackOfTheWeek: Number,
   description: String,
   url: String,
   idNumber: String,

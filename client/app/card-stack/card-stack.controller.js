@@ -4,7 +4,7 @@ angular.module('snckcoApp')
 
 
 
-.controller('Card-stackCtrl', function ($scope, $http, Auth, $location, $filter) {
+.controller('Card-stackCtrl', ["$scope","$http","Auth","$location","$filter", function ($scope, $http, Auth, $location, $filter) {
 
         $scope.voteTally = 0; 
 
@@ -106,6 +106,5 @@ angular.module('snckcoApp')
         };
 
 
-    })
-;
+    }]);
 

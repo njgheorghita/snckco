@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('snckcoApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location) {
+  .controller('SignupCtrl', ["$scope","Auth","$location", function ($scope, Auth, $location) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -31,4 +31,4 @@ angular.module('snckcoApp')
       }
     };
 
-  });
+  }]);

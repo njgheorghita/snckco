@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('snckcoApp')
-	.controller('MachineIdCtrl', function ($scope, $http, $location, Auth, machineService) {
+	.controller('MachineIdCtrl', ["$scope", "$http", "$location", "Auth", "machineService", function ($scope, $http, $location, Auth, machineService) {
 	$scope.machineId = '';
 	$scope.errorMessage = '';
 	$scope.getCurrentUser = Auth.getCurrentUser();
@@ -46,4 +46,4 @@ angular.module('snckcoApp')
 		$scope.machineId = '';
 		$scope.errorMessage = $scope.errorMessageId;
 	};
-});
+}]);

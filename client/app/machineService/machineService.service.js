@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('snckcoApp')
-  .service('machineService', function ($rootScope) {
+  .service('machineService', ["$rootScope", function ($rootScope) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     /*var users = '';
     return {
@@ -25,4 +25,4 @@ angular.module('snckcoApp')
     	}
     };
 	
-});
+}]);

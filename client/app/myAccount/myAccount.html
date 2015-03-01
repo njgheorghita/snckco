@@ -37,7 +37,7 @@
 							<button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
 							<img ng-src="./../../assets/images/milkOreo.jpg">
 							<p> Annedore's Milk Chocolate Oreo </p>
-							<button ng-click="selectOne()">choose</button>
+							<button class="smallButton" ng-click="selectOne()">choose</button>
 						</figure>
 					
 						<figure class="face back">
@@ -53,7 +53,7 @@
 							<button ng-click="isFlippy=!isFlippy"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
 							<img ng-src="./../../assets/images/milkPattie.jpg">
 							<p> Annedore's Milk Chocolate Peanut Pattie </p>
-							<button ng-click="selectTwo()">choose</button>
+							<button class="smallButton" ng-click="selectTwo()">choose</button>
 						</figure>
 					
 						<figure class="face back">
@@ -68,7 +68,7 @@
 							<button ng-click="isFlippo=!isFlippo"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
 							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg">
 							<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake </p>
-							<button ng-click="selectThree()">choose</button>
+							<button class="smallButton" ng-click="selectThree()">choose</button>
 						</figure>
 					
 						<figure class="face back">
@@ -83,7 +83,7 @@
 							<button ng-click="isFlippen=!isFlippen"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
 							<img ng-src="./../../assets/images/hungryMonkeyBad.jpg">
 							<p> Hungry Monkey Party Bites, Bad Boys </p>
-							<button ng-click="selectFour()">choose</button>
+							<button class="smallButton" ng-click="selectFour()">choose</button>
 						</figure>
 					
 						<figure class="face back">
@@ -93,8 +93,15 @@
 							asdfasdf
 						</figure>
 					</div>
-					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()">submit</button></div>
-					<div ng-show="submitted">Come back next week to vote again</div>
+					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">submit</button></div>
+					<div ng-show="submitted">
+						<p>
+						</p>
+
+						<p>
+						Come back next week to vote again
+						</p>
+					</div>
 				</div>
 
 
