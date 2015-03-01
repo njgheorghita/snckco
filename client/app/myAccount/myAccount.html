@@ -8,7 +8,7 @@
 
 			<div class="mymachines">	
 				<button class="p" ng-click="hello = !hello;">
-					mymachines
+					My Machines
 				</button>
 				<div class="machineInfo">
 					<div ng-show="!hello">
@@ -25,21 +25,84 @@
 				</div>
 			</div>
 
-			<div class="votes">
+			<div class="votes" style="">
 				<button class="p" ng-click="votes = !votes;">
-					myvotes
+					Snck of the Week
 				</button>
 
 				<div class="classsy" ng-show="!votes">
-					<p>
-						Local snck Showcase votes coming soon. 
-					</p>
+
+					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
+						<figure class="face front" ng-class="{'chosen':chooseOne}">
+							<button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<img ng-src="./../../assets/images/milkOreo.jpg">
+							<p> Annedore's Milk Chocolate Oreo </p>
+							<button ng-click="selectOne()">choose</button>
+						</figure>
+					
+						<figure class="face back">
+							<div ng-click="isFlipped=!isFlipped" style="margin-right:0%;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </div>
+							asdfasdf
+						</figure>
+					</div>
+
+					<div class="cardFlip" ng-class="{'flipped':isFlippy}" ng-show="!submitted">
+						<figure class="face front" ng-class="{'chosen':chooseTwo}">
+							<button ng-click="isFlippy=!isFlippy"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<img ng-src="./../../assets/images/milkPattie.jpg">
+							<p> Annedore's Milk Chocolate Peanut Pattie </p>
+							<button ng-click="selectTwo()">choose</button>
+						</figure>
+					
+						<figure class="face back">
+							<div ng-click="isFlippy=!isFlippy" style="margin-right:0%;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </div>
+							asdfasdf
+						</figure>
+					</div>
+					<div class="cardFlip" ng-class="{'flipped':isFlippo}" ng-show="!submitted">
+						<figure class="face front" ng-class="{'chosen':chooseThree}">
+							<button ng-click="isFlippo=!isFlippo"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg">
+							<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake </p>
+							<button ng-click="selectThree()">choose</button>
+						</figure>
+					
+						<figure class="face back">
+							<div ng-click="isFlippo=!isFlippo" style="margin-right:0%;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </div>
+							asdfasdf
+						</figure>
+					</div>
+					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
+						<figure class="face front" ng-class="{'chosen':chooseFour}">
+							<button ng-click="isFlippen=!isFlippen"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<img ng-src="./../../assets/images/hungryMonkeyBad.jpg">
+							<p> Hungry Monkey Party Bites, Bad Boys </p>
+							<button ng-click="selectFour()">choose</button>
+						</figure>
+					
+						<figure class="face back">
+							<div ng-click="isFlippen=!isFlippen" style="margin-right:0%;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </div>
+							asdfasdf
+						</figure>
+					</div>
+					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()">submit</button></div>
+					<div ng-show="submitted">Come back next week to vote again</div>
 				</div>
+
+
 			</div>
 
-			<div class="account">
+			<div class="account" style="width:500px; margin-left:auto;margin-right:auto;">
 				<button class="p" ng-click="account = !account;">
-					account
+					My Account
 				</button>
 
 				<div class="emailsss" ng-show="!account">
@@ -50,7 +113,7 @@
 			</div>
 			<div class="feedback">
 				<button class="p" ng-click="feedback = !feedback;">
-					holler at us
+					Tell Us What You Want
 				</button>
 
 				<div ng-show="!feedback">
