@@ -12,6 +12,7 @@ router.delete('/:id', auth.hasRole('admin'), controller.destroy);
 router.get('/me', auth.isAuthenticated(), controller.me);
 router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.put('/api/:id/addMachine', auth.isAuthenticated(), controller.addMachine);
+router.put('/api/:id/snckOfTheWeek', auth.isAuthenticated(), controller.snckOfTheWeek);
 router.get('/:id', auth.isAuthenticated(), controller.show);
 router.post('/', controller.create);
 

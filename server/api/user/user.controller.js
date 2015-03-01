@@ -101,6 +101,27 @@ exports.addMachine = function(req, res) {
     });
 };
 
+/**
+ * add snckOfTheWeek
+ */
+// Updates an existing cards2 in the DB.
+exports.snckOfTheWeek = function(req, res) {
+  console.log('errortag');
+  var snckOfTheWeek = req.body.snckOfTheWeek;
+  var userId = req.params.id;
+  User.findByIdAndUpdate(
+    userId, 
+    {$push: {snckOfTheWeek: snckOfTheWeek}},
+    {},
+    function(err, model) {
+      if (err) {
+        console.log(err);
+        res.send(400);
+      }else{
+        res.send(200);
+      }
+    });
+};
 
 /**
  * Get my info

@@ -66,9 +66,20 @@ angular.module('snckcoApp')
 	        message: $scope.comment}).success(function(data){console.log("data-entry-made")
 	    });
 	};
-	$scope.itemChosen = true;
 
+	$scope.itemChosen = true;
 	$scope.snckWeekVote = '';
+
+	$scope.snckButton = function () {
+		$scope.votes = !($scope.votes);
+		console.log($scope.getCurrentUser().snckOfTheWeek.length);
+		if ($scope.getCurrentUser().snckOfTheWeek.length >= 1){
+			$scope.submitted = true;
+		} else {
+			$scope.submitted = false;
+		}
+	};
+
 	$scope.selectOne= function() {
 		$scope.itemChosen = false;
 		$scope.snckWeekVote = 'milkOreo';
@@ -126,8 +137,14 @@ angular.module('snckcoApp')
 		}
 	};
 	$scope.submitSnck = function() {
-		console.log($scope.snckWeekVote);
+		console.log($scope.getCurrentUser().snckOfTheWeek);
 		$scope.submitted=!($scope.submitted);
-	}
+		//put vote in snckOfTheWeek
+		$http.put('/api/users/api/'+ $scope.getCurrentUser()._id +'/snckOfTheWeek', {snckOfTheWeek: $scope.snckWeekVote})
+		.success(function() {
+					// refresh the locally cached user
+					Auth.refresh();
+				});
+	};
 	   
 	});
