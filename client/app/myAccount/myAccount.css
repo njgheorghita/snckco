@@ -88,6 +88,7 @@ list-style-type: none;
 
 .cardFlip .face .front {
 	position: relative;
+	background-color: white;
 }
 
 .cardFlip .front > button {
@@ -113,9 +114,7 @@ list-style-type: none;
 }
 
 .cardFlip .back {
-	border: 2px solid #85B4FF;
   -webkit-transform: rotateY(180deg);
-  border-radius: 5px;
   background-color: white;
 }
 

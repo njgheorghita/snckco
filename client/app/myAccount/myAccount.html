@@ -95,10 +95,14 @@
 					</div>
 					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">submit</button></div>
 					<div ng-show="submitted">
-						<p>
-						</p>
-
-						<p>
+						<h1 style="color:#3399FF;">Total Votes</h1>
+						<br>
+						<p> Annedore's Milk Chocolate Oreo: {{valueSotwOne}} </p>
+						<p> Annedore's Milk Chocolate Peanut Pattie: {{valueSotwTwo}} </p>
+						<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake: {{valueSotwThree}} </p>
+						<p> Hungry Monkey Party Bites, Bad Boys: {{valueSotwFour}} </p>
+						<br>
+						<p style="color:#3399FF;">
 						Come back next week to vote again
 						</p>
 					</div>
@@ -128,7 +132,7 @@
 						<div ng-hide"inputValue" class="ng-hide">
 						</div>
 						<div ng-hide="inputValue">
-							<p style="color:#3399FF; font-size: 2em; width: 50%; margin-left:auto; margin-right:auto; line-height: 1em;"> Feedback makes us better at what we do.<br> Leave any here along with snck requests or professions of love. </p>
+							<p style="color:#3399FF; font-size: 2em; width: 50%; margin-left:auto; margin-right:auto; line-height: 1em;"> Feedback makes us better at what we do.<br> <span style="font-size:.7em;">Leave any here along with snck requests or professions of love.</span></p>
 							<br>
 							<input type="text" class="form-control" data-ng-model="comment" style="width: 50%; margin-left: auto; margin-right: auto; text-align:center;">
 							<br>
