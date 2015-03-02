@@ -6,25 +6,6 @@
 			</p>
 		</div>
 
-			<div class="mymachines">	
-				<button class="p" ng-click="hello = !hello;">
-					My Machines
-				</button>
-				<div class="machineInfo">
-					<div ng-show="!hello">
-						<p>
-							<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index">
-							 {{machines}} 		<br>
-							<a href="/card-stack">
-							<span class="fancyPrint">go to votes </span><span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-							<br>
-							<a href="/">
-							<span class="glyphicon glyphicon-plus-sign"></span> <span class="fancyPrint">add a machine</span></a>
-						</p>
-					</div>
-				</div>
-			</div>
-
 			<div class="votes" style="">
 				<button class="p" ng-click="snckButton()">
 					Snck of the Week
@@ -95,20 +76,35 @@
 					</div>
 					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">submit</button></div>
 					<div ng-show="submitted">
-						<h1 style="color:#3399FF;">Total Votes</h1>
-						<br>
 						<p> Annedore's Milk Chocolate Oreo: {{valueSotwOne}} </p>
 						<p> Annedore's Milk Chocolate Peanut Pattie: {{valueSotwTwo}} </p>
 						<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake: {{valueSotwThree}} </p>
 						<p> Hungry Monkey Party Bites, Bad Boys: {{valueSotwFour}} </p>
 						<br>
-						<p style="color:#3399FF;">
-						Come back next week to vote again
+						<h2>
+						Check back next week for new sncks!
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="mymachines" style="width:400px;margin-left:auto;margin-right:auto;">	
+				<button class="p" ng-click="hello = !hello;">
+					My Machines
+				</button>
+				<div class="machineInfo">
+					<div ng-show="!hello">
+						<p>
+							<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index">
+							 {{machines}} 		<br>
+							<a href="/card-stack">
+							<span class="fancyPrint">go to votes </span><span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+							<br>
+							<a href="/">
+							<span class="glyphicon glyphicon-plus-sign"></span> <span class="fancyPrint">add a machine</span></a>
 						</p>
 					</div>
 				</div>
-
-
 			</div>
 
 			<div class="account" style="width:500px; margin-left:auto;margin-right:auto;">
