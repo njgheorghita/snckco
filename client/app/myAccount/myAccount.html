@@ -25,15 +25,17 @@
 							<div ng-click="isFlipped=!isFlipped" style="margin-right:0%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-							asdfasdf
+                            <p>Delicious milk chocolate covered oreo</p>
+							<p>Made in KC!</p>
+							<p>$1.50</p>
 						</figure>
 					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippy}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseTwo}">
 							<button ng-click="isFlippy=!isFlippy"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
-							<img ng-src="./../../assets/images/milkPattie.jpg">
-							<p> Annedore's Milk Chocolate Peanut Pattie </p>
+							<img ng-src="./../../assets/images/banana.jpg">
+							<p> Banana </p>
 							<button class="smallButton" ng-click="selectTwo()">choose</button>
 						</figure>
 					
@@ -41,14 +43,16 @@
 							<div ng-click="isFlippy=!isFlippy" style="margin-right:0%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-							asdfasdf
+                            <br>
+							<p>Is that a banana in your pocket or . . .</p>
+							<p> $0.50 </p>
 						</figure>
 					</div>
 					<div class="cardFlip" ng-class="{'flipped':isFlippo}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseThree}">
 							<button ng-click="isFlippo=!isFlippo"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
-							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg">
-							<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake </p>
+							<img ng-src="./../../assets/images/babyBottleBerry.jpg">
+							<p> Baby Bottle Pop: Blue Raspberry</p>
 							<button class="smallButton" ng-click="selectThree()">choose</button>
 						</figure>
 					
@@ -56,7 +60,8 @@
 							<div ng-click="isFlippo=!isFlippo" style="margin-right:0%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-							asdfasdf
+							<p>Healthy nutrition for babies since 1998.</p>
+							<p>$1.50</p>
 						</figure>
 					</div>
 					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
@@ -71,14 +76,17 @@
 							<div ng-click="isFlippen=!isFlippen" style="margin-right:0%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-							asdfasdf
+                            <p>
+							Quart of delicious garlic, onion and poppin' corn</p>
+							<p> Made in KC!</p>
+							<p>$2.25</p>
 						</figure>
 					</div>
 					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">submit</button></div>
 					<div ng-show="submitted">
 						<p> Annedore's Milk Chocolate Oreo: {{valueSotwOne}} </p>
-						<p> Annedore's Milk Chocolate Peanut Pattie: {{valueSotwTwo}} </p>
-						<p> Hungry Monkey Party Bites, White Chocolate Wedding Cake: {{valueSotwThree}} </p>
+						<p> Banana: {{valueSotwTwo}} </p>
+						<p> Baby Bottle Pop:Blue Raspberry: {{valueSotwThree}} </p>
 						<p> Hungry Monkey Party Bites, Bad Boys: {{valueSotwFour}} </p>
 						<br>
 						<h2>
@@ -89,7 +97,7 @@
 			</div>
 
 			<div class="mymachines" style="width:400px;margin-left:auto;margin-right:auto;">	
-				<button class="p" ng-click="hello = !hello;">
+				<button class="p" ng-click="myMachines()">
 					My Machines
 				</button>
 				<div class="machineInfo">

@@ -16,7 +16,7 @@ angular.module('snckcoApp')
         })
         .then( function() {
           // Account created, redirect to home
-          $location.path('/');
+          $location.path('/myaccount');
         })
         .catch( function(err) {
           err = err.data;
@@ -29,6 +29,7 @@ angular.module('snckcoApp')
           });
         });
       }
+      
     };
 
   }]);
