@@ -11,12 +11,14 @@
 	margin-top: 60px;
 }
 
-
+.header > p {
+	font-size:4.5vmax;
+}
 
 .header {
-	font-size: 3em;
+	font-size: 2em;
 	color: #85B4FF;
-	padding-top: 175px;
+	padding-top: 150px;
 }
 
 .errorMessage {

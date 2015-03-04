@@ -1,5 +1,5 @@
 input.form-control {
-	width: 50%;
+	width: 50vmax;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -13,7 +13,7 @@ button.btn.btn-inverse.btn-lg.btn-login {
 }
 
 .form {
-	margin-top: 20px;
+	line-height: 10px;
 }
 
 .facebook {
