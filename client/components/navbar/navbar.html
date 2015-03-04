@@ -5,7 +5,7 @@
       background-image: url("{{variableLink}}");
       background-color: #85B4FF;
       background-position: center bottom;
-      height: 100px;
+      height: 18vmin;
       font-size: 2em;
       color: white;
       position:absolute;
@@ -36,8 +36,9 @@
   .img-responsive{
     border: 2px solid white;
     border-radius: 8px;
-    width: 260px;
-    height: auto;
+    width: auto;
+    height: 18vmax;
+    height: 23vmin;
     margin-left: auto;
     margin-right: auto;
   }
@@ -82,7 +83,7 @@
 
       <img class="img-responsive" src="./../../assets/images/snck1.jpg" alt="I'm Yeoman" ></image>
       <div class="navbar-header">
-        <button class="navbar-toggle" type="button" ng-init="navCollapse=true" ng-click="navCollapse=!navCollapse">
+        <button class="navbar-toggle" type="button" ng-init="navCollapse=true" style="margin-top: -70px;"ng-click="navCollapse=!navCollapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>

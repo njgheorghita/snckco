@@ -4,8 +4,9 @@ input.form-control {
 	margin-left: auto;
 }
 
+
 button.btn.btn-inverse.btn-lg.btn-login {
-	font-size: 2em;
+	font-size:5vmin;
 }
 
 .form-control {

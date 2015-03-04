@@ -26,7 +26,9 @@ button {
   }
 input {
   width: 50px; }
-
+.headerFont {
+  font-size: 7vmin;
+}
 .properName {
   width: 90%;
   margin-left: auto;
@@ -37,7 +39,8 @@ input {
   font-size: 3em;
   font-family: lobster;
   font-weight: .5em;
-  padding-top: 140px;
+  padding-top: 14vmax;
+  padding-top: 20vmin;
   margin-bottom: 20px;
 }
 
