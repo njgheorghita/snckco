@@ -109,6 +109,7 @@ list-style-type: none;
 .cardFlip .face {
   -webkit-backface-visibility:hidden;
   background-color: white;
+  position: fixed;
 
 }
 
@@ -140,7 +141,7 @@ list-style-type: none;
 }
 
 .cardFlip .back {
-  -webkit-transform: rotateY(180deg);
+  -webkit-transform: translateX(0%) rotateY(180deg);
   background-color: white;
 }
 
