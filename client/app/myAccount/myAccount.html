@@ -1,7 +1,7 @@
 <div class="widthtest" ng-controller="MyAccountCtrl">	
 
 		<div class="greeting">
-			<h2>
+			<h2 style="margin-bottom:10px;">
 				Hey {{ getCurrentUser().name }}. 
 			</h2>
 		</div>
@@ -11,7 +11,7 @@
 					Snck of the Week
 				</button>
 
-				<div class="classsy" style="width:90%;"ng-show="!votes">
+				<div class="classsy" style="width:100%;"ng-show="!votes">
 
 					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseOne}">

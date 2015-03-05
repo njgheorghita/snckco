@@ -13,6 +13,7 @@ h2 {
 	border: 1px solid white;
 	border-radius: 5px;
 	width: 90%;
+	height:2.5em;
 }
 
 .header {
@@ -21,8 +22,7 @@ h2 {
 }
 
 .greeting {
-	padding-top: 14vmax;
-	padding-top: 25vmin;
+	padding-top: 20vmin;
 	font-size: 6vmax;
 	font-family: lobster;
 	color: #3399FF;
@@ -75,7 +75,8 @@ list-style-type: none;
 	font-size: 5vmin;
 	position: relative;
 	padding-left:2vmin;
-	width:10em;
+	width:12em;
+	max-width:200vmin;
 	height:30em;
 	margin-right: auto;
 	margin-left: auto;
@@ -93,8 +94,8 @@ list-style-type: none;
 	float:left;
 	border: 2px solid #85B4FF;
 	border-radius: 5px;
-	height:30vmax;
-	width: 40vmin;
+	height:27vmax;
+	width: 45vmin;
 	/*height:8vmax;
 	height:40vmin;
 	width: 15vmax;
