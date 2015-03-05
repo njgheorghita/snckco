@@ -25,14 +25,14 @@
 
                         <div class="face front">
                             <p class="card" swing-stack></p>
-                                <img ng-src="./../../assets/images/{{card.name}}.jpg" class="img-responsive" style="max-height:250px;max-width:250px;"></img>
+                                <img ng-src="./../../assets/images/{{card.name}}.jpg" style="max-height:250px;max-width:250px;"></img>
                                 <div class="properName" style="line-height: 1em;">
                                     {{card.proper}}
                                 </div>
 
-                                <div class="locallyMade" style="position:absolute;margin-top:-70%;margin-left:-20%;">
+                                <div class="locallyMade" style="position:absolute;height:auto;max-width:22vmin;margin-top:-65%;">
                                     <span ng-show="card.local == 'True'"> 
-                                        <img ng-src="./../../assets/images/kcMade2.jpg" class="img-responsive" style="height: 50%; width: 50%;border-radius:150px; "></img>
+                                        <img ng-src="./../../assets/images/kcMade2.jpg" class="img-responsive" style="border-radius:150px; "></img>
                                     </span>
                                     <span ng-show="card.local == 'False'">
                                     </span>
@@ -46,7 +46,7 @@
                                     </span>   
                                 </div>
                                     
-                                <div ng-click="isFlipped=!isFlipped" style="position:absolute; margin-top:-65%; margin-left: 80%;">
+                                <div ng-click="isFlipped=!isFlipped" style="position:absolute; margin-top:-65%; margin-left: 70%;">
                                     <span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span>
                                 </div>
                                 
@@ -58,8 +58,8 @@
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                         <div style="margin-top: 20%;">
-                            <p>{{card.price}}</p>
-                            <p>{{card.description}}</p>
+                            <p style="font-size:10vmin;">{{card.price}}</p>
+                            <pstyle="font-size:10vmin;">{{card.description}}</p>
                         </div>
                     </div>
           

@@ -1,16 +1,4 @@
 
-.butt {
-	height: 75px;
-	background-color: #85B4FF;
-	width: 150px;
-	color: white;
-	font-size: 2.5em;
-	border-radius: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 60px;
-}
-
 .header > p {
 	font-size:4.5vmax;
 }
@@ -18,7 +6,7 @@
 .header {
 	font-size: 2em;
 	color: #85B4FF;
-	padding-top: 150px;
+	padding-top: 28vmin;
 }
 
 .errorMessage {
@@ -29,10 +17,10 @@
 .booty {
 	background: white;
 	border: 3px solid #3399FF;
-	width: 200px;
+	width: 25vmax;
 	height: auto;
 	border-radius: 10px;
-	font-size: 1.5em;
+	font-size: 8vmax;
 	text-align: center;
 	margin-top: 30px;
 	color: #85B4FF;

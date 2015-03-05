@@ -1,28 +1,28 @@
 <div class="widthtest" ng-controller="MyAccountCtrl">	
 
 		<div class="greeting">
-			<p>
+			<h2>
 				Hey {{ getCurrentUser().name }}. 
-			</p>
+			</h2>
 		</div>
 
-			<div class="votes" style="">
+			<div class="votes" ng-hide="!account || !feedback || !hello">
 				<button class="p" style="font-size:7vmin;" ng-click="snckButton()">
 					Snck of the Week
 				</button>
 
-				<div class="classsy" ng-show="!votes">
+				<div class="classsy" style="width:90%;"ng-show="!votes">
 
 					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseOne}">
-							<button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
 							<img ng-src="./../../assets/images/milkOreo.jpg">
 							<p> Annedore's Milk Chocolate Oreo </p>
 							<button class="smallButton" ng-click="selectOne()">choose</button>
 						</figure>
 					
 						<figure class="face back">
-							<div ng-click="isFlipped=!isFlipped" style="margin-right:0%;">
+							<div ng-click="isFlipped=!isFlipped" style="">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                             <p>Delicious milk chocolate covered oreo</p>
@@ -33,7 +33,7 @@
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippy}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseTwo}">
-							<button ng-click="isFlippy=!isFlippy"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<button ng-click="isFlippy=!isFlippy"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
 							<img ng-src="./../../assets/images/banana.jpg">
 							<p> Banana </p>
 							<button class="smallButton" ng-click="selectTwo()">choose</button>
@@ -48,9 +48,10 @@
 							<p> $0.50 </p>
 						</figure>
 					</div>
+
 					<div class="cardFlip" ng-class="{'flipped':isFlippo}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseThree}">
-							<button ng-click="isFlippo=!isFlippo"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<button ng-click="isFlippo=!isFlippo"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
 							<img ng-src="./../../assets/images/babyBottleBerry.jpg">
 							<p> Baby Bottle Pop: Blue Raspberry</p>
 							<button class="smallButton" ng-click="selectThree()">choose</button>
@@ -66,7 +67,7 @@
 					</div>
 					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseFour}">
-							<button ng-click="isFlippen=!isFlippen"><span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span></button>
+							<button ng-click="isFlippen=!isFlippen"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
 							<img ng-src="./../../assets/images/hungryMonkeyBad.jpg">
 							<p> Hungry Monkey Party Bites, Bad Boys </p>
 							<button class="smallButton" ng-click="selectFour()">choose</button>
@@ -95,7 +96,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="mymachines" style="width:100%;margin-left:auto;margin-right:auto;">	
+			<div class="mymachines" style="width:100%;margin-left:auto;margin-right:auto;" ng-hide="!votes || !account || !feedback">
 				<button class="p" style="font-size:7vmin;" ng-click="myMachines()">
 					My Machines
 				</button>
@@ -114,7 +115,7 @@
 				</div>
 			</div>
 
-			<div class="account" style="margin-left:auto;margin-right:auto;">
+			<div class="account" style="margin-left:auto;margin-right:auto;" ng-hide="!votes || !feedback || !hello">
 				<button class="p" style="font-size:7vmin;" ng-click="account = !account;">
 					My Account
 				</button>
@@ -125,7 +126,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="feedback">
+			<div class="feedback" ng-hide="!votes || !account || !hello">
 				<button class="p" style="font-size:7vmin;" ng-click="feedback = !feedback;">
 					Tell Us What You Want
 				</button>
@@ -135,7 +136,7 @@
 						<div ng-hide"inputValue" class="ng-hide">
 						</div>
 						<div ng-hide="inputValue">
-							<p style="color:#3399FF; font-size: 4vmax; margin-left:auto; margin-right:auto; line-height: 1em;"> Feedback makes us better at what we do.<br> <span style="font-size:.7em;">Leave any here along with snck requests or professions of love.</span></p>
+							<p style="color:#3399FF; font-size: 4vmax; margin-left:auto; margin-right:auto; line-height: 1em;width:80%;"> Feedback makes us better at what we do.<br> <span style="font-size:.7em;">Leave any here along with snck requests or professions of love.</span></p>
 							<br>
 							<input type="text" class="form-control" data-ng-model="comment" style="width: 80%; margin-left: auto; margin-right: auto; text-align:center;">
 							<br>
