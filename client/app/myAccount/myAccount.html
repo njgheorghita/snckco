@@ -1,32 +1,33 @@
 <div class="widthtest" ng-controller="MyAccountCtrl">	
 
 		<div class="greeting">
-			<h2 style="margin-bottom:10px;">
+			<h2 style="margin-bottom:10px;" ng-hide="!votes || !feedback || !account || !hello">
 				Hey {{ getCurrentUser().name }}. 
 			</h2>
 		</div>
 
 			<div class="votes" ng-hide="!account || !feedback || !hello">
-				<button class="p" style="font-size:7vmin;" ng-click="snckButton()">
-					Snck of the Week
-				</button>
+					<button class="p" style="font-size:7vmin;" ng-click="snckButton()">
+						Snck of the Week
+					</button>
 
-				<div class="classsy" style="width:100%;"ng-show="!votes">
+				<div class="classsy" style="margin-left:auto;margin-right:auto;"ng-show="!votes">
+
 
 					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseOne}">
 							<button ng-click="isFlipped=!isFlipped"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
+							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:10vmin;max-height:10vmin;"></img>
 							<img ng-src="./../../assets/images/milkOreo.jpg">
 							<p> Annedore's Milk Chocolate Oreo </p>
 							<button class="smallButton" ng-click="selectOne()">choose</button>
 						</figure>
 					
 						<figure class="face back">
-							<div ng-click="isFlipped=!isFlipped" style="">
+							<div ng-click="isFlipped=!isFlipped" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                             <p>Delicious milk chocolate covered oreo</p>
-							<p>Made in KC!</p>
 							<p>$1.50</p>
 						</figure>
 					</div>
@@ -40,7 +41,7 @@
 						</figure>
 					
 						<figure class="face back">
-							<div ng-click="isFlippy=!isFlippy" style="margin-right:0%;">
+							<div ng-click="isFlippy=!isFlippy" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                             <br>
@@ -58,7 +59,7 @@
 						</figure>
 					
 						<figure class="face back">
-							<div ng-click="isFlippo=!isFlippo" style="margin-right:0%;">
+							<div ng-click="isFlippo=!isFlippo" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
 							<p>Healthy nutrition for babies since 1998.</p>
@@ -68,18 +69,18 @@
 					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseFour}">
 							<button ng-click="isFlippen=!isFlippen"><span class="glyphicon glyphicon-info-sign" style="font-size:1.5em;"></span></button>
+							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:10vmin;max-height:10vmin;"></img>
 							<img ng-src="./../../assets/images/hungryMonkeyBad.jpg">
 							<p> Hungry Monkey Party Bites, Bad Boys </p>
 							<button class="smallButton" ng-click="selectFour()">choose</button>
 						</figure>
 					
 						<figure class="face back">
-							<div ng-click="isFlippen=!isFlippen" style="margin-right:0%;">
+							<div ng-click="isFlippen=!isFlippen" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                             <p>
 							Quart of delicious garlic, onion and poppin' corn</p>
-							<p> Made in KC!</p>
 							<p>$2.25</p>
 						</figure>
 					</div>
@@ -101,7 +102,7 @@
 					My Machines
 				</button>
 				<div class="machineInfo">
-					<div ng-show="!hello">
+					<div ng-show="!hello" style="line-height:1em;">
 						<p>
 							<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index" style="color:black;">
 							 {{machines}} 		<br>

@@ -5,7 +5,7 @@ html, body, ul, li {
 
 body {
   background: #FFFFFF;
-  font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif; text-align: center;}
+  font: normal 16px/24px 'Calibri', Helvetica, Arial, freesans, sans-serif; text-align: center;}
 
 button, input, code {
   display: inline-block;
@@ -29,6 +29,9 @@ input {
 .headerFont {
   font-size: 10vmin;
 }
+.texticle{
+  bottom:2%;
+}
 .properName {
   width: 90%;
   margin-left: auto;
@@ -39,8 +42,7 @@ input {
   font-size: 3em;
   font-family: lobster;
   font-weight: .5em;
-  padding-top: 14vmax;
-  padding-top: 20vmin;
+  padding-top: 25vmin;
   margin-bottom: 20px;
 }
 
@@ -54,7 +56,9 @@ input {
 }
 
 #viewport {
-  height: 500px;
+  height:85vmin;
+  width:85vmin;
+  max-height: 500px;
 
   max-width: 450px;
 
@@ -112,10 +116,9 @@ input {
 
   .glyphicon-ok-sign {
     color: #85B4FF;
-    margin-right: -60%;
+    right:0;
     font-size: 1.5em;
-    vertical-align: top;
-    margin-top: 1em;
+    top:0;
   }
 
   #viewport .card {

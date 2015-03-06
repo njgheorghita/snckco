@@ -10,7 +10,7 @@
 
     <div id="viewport">
 
-        <div class="comeBackSoon">
+        <div class="comeBackSoon" style="font-size:7vmin;">
             That's it for now. Check back soon for more sncks!
         </div>
 
@@ -25,28 +25,28 @@
 
                         <div class="face front">
                             <p class="card" swing-stack></p>
-                                <img ng-src="./../../assets/images/{{card.name}}.jpg" style="max-height:250px;max-width:250px;"></img>
-                                <div class="properName" style="line-height: 1em;">
+                                <img ng-src="./../../assets/images/{{card.name}}.jpg" style="width:25vmax;height:25vmax;max-height:250px;max-width:250px;"></img>
+                                <div class="properName" style="line-height: 1em;font-size:5vmin;">
                                     {{card.proper}}
                                 </div>
 
-                                <div class="locallyMade" style="position:absolute;height:auto;max-width:22vmin;margin-top:-65%;">
+                                <div class="locallyMade" style="top:-2vmin;left:-2vmin;position:absolute;">
                                     <span ng-show="card.local == 'True'"> 
-                                        <img ng-src="./../../assets/images/kcMade2.jpg" class="img-responsive" style="border-radius:150px; "></img>
+                                        <img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="max-height:15vmin;"></img>
                                     </span>
                                     <span ng-show="card.local == 'False'">
                                     </span>
                                 </div>
                                     
                                 <div class="swipey">
-                                    <span class="texticle">
+                                    <span class="texticle" style="font-size:8vmin;">
                                         <span class="glyphicon glyphicon-chevron-left"></span>
                                             <span>swipe</span>
                                         <span class="glyphicon glyphicon-chevron-right" ng-click="throwout(null, {throwDirection: 1}, $index)"></span>
                                     </span>   
                                 </div>
                                     
-                                <div ng-click="isFlipped=!isFlipped" style="position:absolute; margin-top:-65%; margin-left: 70%;">
+                                <div ng-click="isFlipped=!isFlipped" style="position:absolute; top:0; right:-10vmin;">
                                     <span class="glyphicon glyphicon-info-sign" style="font-size:1.75em;"></span>
                                 </div>
                                 
@@ -54,12 +54,12 @@
                         </div>
 
                     <div class="face back">
-                            <div ng-click="isFlipped=!isFlipped" style="margin-right:0%;">
+                            <div ng-click="isFlipped=!isFlipped" style="right:0;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-                        <div style="margin-top: 20%;">
-                            <p style="font-size:10vmin;">{{card.price}}</p>
-                            <pstyle="font-size:10vmin;">{{card.description}}</p>
+                        <div style="margin-top: 10%;">
+                            <p style="font-size:7vmin;">{{card.price}}</p>
+                            <p style="font-size:7vmin;">{{card.description}}</p>
                         </div>
                     </div>
           

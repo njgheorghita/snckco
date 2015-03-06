@@ -18,11 +18,36 @@ angular.module('snckcoApp')
                 $scope.machineIdentification = data;
      });
 
-	/*for (var i = 0; i <= $scope.getCurrentMachines.machineIds.length; i++){
-	$scope.getCurrentMachinesId = $scope.getCurrentMachines.machineIds[i];
-	console.log($scope.getCurrentMachinesId);
-	};*/
-
+	$scope.sotwArray = [
+		{
+			'name':"Annedore's Milk Chocolate Oreo",
+			'local': "yes",
+			'description':"Delicious milk chocolate covered oreo",
+			'price':"$1.50",
+			'urlName':"milkOreo"
+		},
+		{
+			'name':"Banana",
+			'local': "no",
+			'description':"I'm a banana!",
+			'price':"0.50",
+			'urlName':"banana"
+		},
+		{
+			'name':"Baby Bottle Pop:Blue Raspberry",
+			'local': "no",
+			'description':"Healthy nutrition for babies since 1998.",
+			'price':"1.50",
+			'urlName':"babyBottleBery"
+		},
+		{
+			'name':"Hungry Monkey Party Bites, Bad Boys",
+			'local': "yes",
+			'description':"Quart of delicious garlic, onion and poppin' corn.",
+			'price':"2.25",
+			'urlName':"hungryMonkeyBad"
+		}
+	];
 
     var shuffleArray = function(array) {
       var m = array.length, t, i;

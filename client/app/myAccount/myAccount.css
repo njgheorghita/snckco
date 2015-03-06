@@ -43,6 +43,7 @@ h2 {
 	border:1px solid #BAEBAE;
 	color:white;
 	background-color: #BAEBAE;
+	bottom:3%;
 }
 
 .medButton {
@@ -67,21 +68,23 @@ list-style-type: none;
 }
 
 .emailsss {
-	font-size: 4vmax;
+	font-size: 7vmax;
 	font-family:lobster;
 }
 
 .classsy {
 	font-size: 5vmin;
+	display:flex;
+	justify-content:space-between;
 	position: relative;
 	padding-left:2vmin;
-	width:12em;
-	max-width:200vmin;
+	max-width:90%;
 	height:30em;
 	margin-right: auto;
 	margin-left: auto;
 	-webkit-perspective:800;
 }
+
 .submitButton {
 	width: 50em;
 }
@@ -96,6 +99,7 @@ list-style-type: none;
 	border-radius: 5px;
 	height:27vmax;
 	width: 45vmin;
+	max-width:20%;
 	/*height:8vmax;
 	height:40vmin;
 	width: 15vmax;
@@ -110,6 +114,8 @@ list-style-type: none;
   -webkit-backface-visibility:hidden;
   background-color: white;
   position: fixed;
+  overflow: hidden;
+
 
 }
 
@@ -141,7 +147,7 @@ list-style-type: none;
 }
 
 .cardFlip .back {
-  -webkit-transform: translateX(0%) rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
   background-color: white;
 }
 
