@@ -114,9 +114,6 @@ list-style-type: none;
 	transform-origin: right center;
 }
 @media only screen and (max-width: 768px) {
-    .box {
-        width:170vmin;
-    }
     .cardFlip {
 		width: 45%;
     }
@@ -128,7 +125,7 @@ list-style-type: none;
 .cardFlip .face {
   -webkit-backface-visibility:hidden;
   background-color: white;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
 
 
