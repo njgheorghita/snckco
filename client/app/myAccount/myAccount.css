@@ -120,6 +120,8 @@ list-style-type: none;
 }
 .cardFlip.flipped {
   -webkit-transform: translateX(-100%) rotateY(180deg);
+  -moz-transform: translateX(-100%) rotateY(180deg);
+  -0-transform: translateX(-100%) rotateY(180deg);
 }
 
 .cardFlip .face {
