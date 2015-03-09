@@ -13,6 +13,7 @@ angular.module('snckcoApp')
 	$scope.myValue = true;
 	$scope.inputValue = false;
 	$scope.machineIdentification;
+	$scope.pooper = false;
 
 	$http.get('/api/machines').success(function(data) {
                 $scope.machineIdentification = data;
@@ -268,5 +269,8 @@ angular.module('snckcoApp')
 	   $scope.feedbackBackground = function () {
 			$scope.menuItemBackground = !($scope.menuItemBackground);
 			$scope.feedback = !($scope.feedback);
+	   };
+	   $scope.comingSoon = function() {
+	   	$scope.pooper = !($scope.pooper);
 	   };
 	}]);
