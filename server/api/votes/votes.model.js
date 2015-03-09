@@ -5,8 +5,6 @@ var mongoose = require('mongoose'),
 
 var VotesSchema = new Schema({
   name: String,
-  swipeYes: Number,
-  swipeNo: Number,
   timeanddate: String,
   userId: String
 });

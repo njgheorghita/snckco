@@ -243,7 +243,7 @@ angular.module('snckcoApp')
 		//f$scope.submitted=!($scope.submitted);
 		$scope.resultsIndicator = !($scope.resultsIndicator);
 		//put vote in snckOfTheWeek
-		$http.put('/api/users/api/'+ $scope.getCurrentUser()._id +'/snckOfTheWeek', {snckOfTheWeek: $scope.snackWeekVote})
+		$http.put('/api/users/api/'+ $scope.getCurrentUser()._id +'/snckOfTheWeek', {snckOfTheWeek: $scope.snckWeekVote})
 		.success(function() {
 					// refresh the locally cached user
 					Auth.refresh();
@@ -292,6 +292,14 @@ angular.module('snckcoApp')
     		$scope.lastTwo = true;
     		$scope.lastThree = true;
     	}
+ 			
+ 			$scope.d = new Date();
+    	    $http.post('/votes', {
+                name: $scope.snckWeekVote,
+                timeanddate: $scope.d,
+                userId: $scope.getCurrentUser().name }).success(function(data){
+                    Auth.refresh();
+            });
 	};
 
 		$scope.myMachines = function () {
