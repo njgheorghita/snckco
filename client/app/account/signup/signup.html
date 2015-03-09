@@ -55,6 +55,16 @@
             {{ errors.password }}
           </p>
         </div>
+          <div>
+            <input type="checkbox" ng-checked="booyah" ng-click="noEmails()"><p>Hey this seems pretty neat, I'd like to hear about the latest features and newest sncks. </p>
+          </div>
+          <div>
+            <input type="checkbox" ng-checked="booyahOne" ng-click="yesEmails()"><p>Don't even think about sending me an e-mail.</p>
+          </div>
+          <br>
+          <div class="emailOption" style="color:red;" ng-hide="!emailCommunicate">
+            Please choose an email option.
+          </div>
         <br>
         <div>
           <button class="btn btn-inverse btn-lg btn-login" type="submit" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #3399FF; font-family:lobster; font-size:5vmin; border: 2px solid #3399FF; border-radius: 8px; padding-top:0px;">

@@ -98,8 +98,11 @@ angular.module('snckcoApp')
 			$scope.sotwCount = data;
 		});
 
+	$scope.menuItemBackground = false;
+
 	$scope.snckButton = function () {
 		$scope.votes = !($scope.votes);
+		$scope.menuItemBackground = !($scope.menuItemBackground);
 	//get sotw vote counts
 
 
@@ -246,6 +249,7 @@ angular.module('snckcoApp')
 	};
 
 		$scope.myMachines = function () {
+			$scope.menuItemBackground = !($scope.menuItemBackground);
 			$scope.hello = !($scope.hello);
 			if ($scope.getCurrentUser().machineIds.length < 1){
 			$http.put('/api/users/api/' + $scope.getCurrentUser()._id + '/addMachine', {machineId: "SNCK1"})
@@ -257,4 +261,12 @@ angular.module('snckcoApp')
 					}
 		};
 	   
+	   $scope.myAccountBackground = function () {
+			$scope.menuItemBackground = !($scope.menuItemBackground);
+			$scope.account = !($scope.account);
+	   };
+	   $scope.feedbackBackground = function () {
+			$scope.menuItemBackground = !($scope.menuItemBackground);
+			$scope.feedback = !($scope.feedback);
+	   };
 	}]);

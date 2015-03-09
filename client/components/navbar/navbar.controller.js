@@ -8,10 +8,10 @@ angular.module('snckcoApp')
     }];
 
     $scope.variableNumber = getRandomSpan();
-    $scope.variableLink = './../../assets/images/machines/'+$scope.variableNumber+'.jpg';
+    $scope.variableLink = './../../assets/images/machines/'+$scope.variableNumber+'.svg';
 
     function getRandomSpan() {
-      return Math.floor((Math.random()*38)+1);
+      return Math.floor((Math.random()*30)+1);
     };
 
     $rootScope.$on('$stateChangeStart', function (evt, toState, toParams) {

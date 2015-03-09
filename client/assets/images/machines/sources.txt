@@ -123,11 +123,7 @@
 	"public": "yes";
 },
 {	"name": "parking";
-	"source": http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Bahnautomat.jpg";
-	"public": "yes";
-},
-{	"name": "stamps2";
-	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Stamp_vending_machines_in_the_London_Heathrow_Airport.jpg";
+	"source": "http://en.wikipedia.org/wiki/Vending_machine#mediaviewer/File:Bahnautomat.jpg";
 	"public": "yes";
 },
 {	"name": "juice";

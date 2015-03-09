@@ -1,6 +1,6 @@
 p {
-	color: #3399FF;
-	font-size: 4vmin;
+	color: black;
+	font-size: 3vmin;
 }
 h2 {
 	font-size:6vmax;
@@ -14,8 +14,16 @@ h2 {
 	border-radius: 5px;
 	width: 90%;
 	height:2.5em;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+         0px 8px 13px rgba(0,0,0,0.1),
+         0px 18px 23px rgba(0,0,0,0.1);
 }
+.menuItemChosen {
+	background-color: #3399FF;
+}
+.frontName{
 
+}
 .header {
 	font-size: 3em;
 	color: #85B4FF;
@@ -69,15 +77,14 @@ list-style-type: none;
 
 .emailsss {
 	font-size: 7vmax;
-	font-family:lobster;
+	color:black;
 }
 
 .classsy {
 	font-size: 5vmin;
-	display:flex;
-	justify-content:space-between;
+	/* display:flex;
+	justify-content:space-between;*/
 	position: relative;
-	padding-left:2vmin;
 	max-width:90%;
 	height:30em;
 	margin-right: auto;
@@ -88,23 +95,31 @@ list-style-type: none;
 .submitButton {
 	width: 50em;
 }
-
 .cardFlip {
   -webkit-transform-style: preserve-3d;
   -webkit-transition: 0.5s;
   z-index: -1;
+  float: left;
+  box-sizing: borderbox;
 	margin: 5px;
-	float:left;
 	border: 2px solid #85B4FF;
 	border-radius: 5px;
-	height:27vmax;
-	width: 45vmin;
-	max-width:20%;
+	height:25%;
+	width: 23%;
+	max-height: 350px;
 	/*height:8vmax;
 	height:40vmin;
 	width: 15vmax;
 	width: 30vmin;*/
 	transform-origin: right center;
+}
+@media only screen and (max-width: 768px) {
+    .box {
+        width:170vmin;
+    }
+    .cardFlip {
+		width: 45%;
+    }
 }
 .cardFlip.flipped {
   -webkit-transform: translateX(-100%) rotateY(180deg);
@@ -134,8 +149,9 @@ list-style-type: none;
 	position: absolute;
 		vertical-align: bottom;
 		margin-top: 10%;
-		width: 40%;
-		height:15%;
+		width: 50%;
+		height:20%;
+		margin-left: -25%;
 }
 
 .cardflip > figure {
@@ -189,6 +205,11 @@ list-style-type: none;
 	font-size: 1em;
 	vertical-align: text-bottom;
 }
+.glyphicon-ok-sign {
+	height:15%;
+	top:15vmin;right:-1vmin;position:absolute;max-width:10vmin;max-height:10vmin;
+}
+
 
 .fancyPrint{
 	font-family: lobster;

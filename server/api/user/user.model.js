@@ -17,6 +17,7 @@ var UserSchema = new Schema({
   cardnames: Array,
   machineIds: Array,
   snckOfTheWeek: Array,
+  emailPreference: String
 });
 
 /**
