@@ -17,7 +17,8 @@
 					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseOne}">
 							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;"></img>
-							<object width="47%" type="image/svg+xml" data="./../../assets/images/milkOreo.svg"></object>
+							<img ng-src="./../../assets/images/milkOreo.jpg"></img>
+							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/milkOreo.jpg"></object-->
 							<button ng-click="isFlipped=!isFlipped" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
 							<p class="frontName"> Annedore's Milk Chocolate Oreo </p>
 							<button class="smallButton" ng-click="selectOne()">choose</button>
@@ -27,16 +28,19 @@
 							<div ng-click="isFlipped=!isFlipped" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-                            <p>Delicious milk chocolate covered oreo</p>
+                            <p>milk chocolate covered oreo</p>
 							<p>$1.50</p>
+							<a style="font-size:50%;" href="http://www.annedores.com" target="_blank">www.annedores.com</a>
 						</figure>
 					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippy}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseTwo}">
-							<object width="47%" type="image/svg+xml" data="./../../assets/images/banana.svg"></object>
+							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;"></img>
+							<img ng-src="./../../assets/images/scratchCookie.jpg"></img>
+							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/banana.svg"></object-->
 							<button ng-click="isFlippy=!isFlippy" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p> Banana </p>
+							<p> Scratch Bakery PB and Choc. Swirl Cookie</p>
 							<button class="smallButton" ng-click="selectTwo()">choose</button>
 						</figure>
 					
@@ -44,17 +48,18 @@
 							<div ng-click="isFlippy=!isFlippy" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-                            <br>
-							<p>Is that a banana in your pocket or . . .</p>
-							<p> $0.50 </p>
+							<p>locally made deliciousness</p>
+							<p> $2.00 </p>
+							<a style="font-size:50%;" href="http://www.scratchbakerykc.com" target="_blank">www.scratchbakery.com</a>
 						</figure>
 					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippo}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseThree}">
-							<object width="47%" type="image/svg+xml" data="./../../assets/images/babyBottleBerry.svg"></object>
+							<img ng-src="./../../assets/images/toblerone.jpg"></img>
+							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/babyBottleBerry.svg"></object-->
 							<button ng-click="isFlippo=!isFlippo" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p> Baby Bottle Pop: Blue Raspberry</p>
+							<p>Toblerone</p>
 							<button class="smallButton" ng-click="selectThree()">choose</button>
 						</figure>
 					
@@ -62,14 +67,15 @@
 							<div ng-click="isFlippo=!isFlippo" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
-							<p>Healthy nutrition for babies since 1998.</p>
-							<p>$1.50</p>
+							<p>direct from the swiss alps</p>
+							<p>$2.50</p>
 						</figure>
 					</div>
 					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
 						<figure class="face front" ng-class="{'chosen':chooseFour}">
 							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;border:0px solid white;"></img>
-							<object width="47%" type="image/svg+xml" data="./../../assets/images/hungryMonkeyBad.svg"></object>
+							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg"></img>
+							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/hungryMonkeyBad.svg"></object-->
 							<button ng-click="isFlippen=!isFlippen" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
 							<p> Hungry Monkey Party Bites, Bad Boys </p>
 							<button class="smallButton" ng-click="selectFour()">choose</button>
@@ -82,6 +88,7 @@
                             <p>
 							Quart of delicious garlic, onion and poppin' corn</p>
 							<p>$2.25</p>
+							<a style="font-size:50%;" href="http://www.hungrymonkeypartybites.com" target="_blank">www.hungrymonkeypartybites.com</a>
 						</figure>
 					</div>
 					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">Vote!</button></div>
