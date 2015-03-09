@@ -110,7 +110,7 @@ list-style-type: none;
 	width: 15vmax;
 	width: 30vmin;*/
 	-webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
+    -webkit-transition: 0.5s;
 	-webkit-transform-origin: right center;
 }
 @media only screen and (max-width: 768px) {
