@@ -96,8 +96,6 @@ list-style-type: none;
 	width: 50em;
 }
 .cardFlip {
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
   z-index: -1;
   float: left;
   box-sizing: borderbox;
@@ -111,7 +109,9 @@ list-style-type: none;
 	height:40vmin;
 	width: 15vmax;
 	width: 30vmin;*/
-	transform-origin: right center;
+	-webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+	-webkit-transform-origin: right center;
 }
 @media only screen and (max-width: 768px) {
     .cardFlip {
@@ -120,8 +120,7 @@ list-style-type: none;
 }
 .cardFlip.flipped {
   -webkit-transform: translateX(-100%) rotateY(180deg);
-  -moz-transform: translateX(-100%) rotateY(180deg);
-  -0-transform: translateX(-100%) rotateY(180deg);
+
 }
 
 .cardFlip .face {
