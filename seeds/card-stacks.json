@@ -115,4 +115,30 @@
           "description": "Quart of delicious poppin' corn",
           "url":"asdfasdf",
           "idNumber": "009"
+     },{
+          "name":"scratchCookie",
+          "proper":"Scratch Bakery PB and Choc. Swirl Cookie",
+          "price":"$2.00",
+          "calories": "20",
+          "local": "True",
+          "sugar": "100g",
+          "swipeYes": 0,
+          "swipeNo": 0,
+          "snackOfTheWeek": 0,
+          "description": "Quart of delicious poppin' corn",
+          "url":"asdfasdf",
+          "idNumber": "010"
+     },{
+          "name":"toblerone",
+          "proper":"Toblerone",
+          "price":"$2.50",
+          "calories": "20",
+          "local": "False",
+          "sugar": "100g",
+          "swipeYes": 0,
+          "swipeNo": 0,
+          "snackOfTheWeek": 0,
+          "description": "Quart of delicious poppin' corn",
+          "url":"asdfasdf",
+          "idNumber": "009"
      }]

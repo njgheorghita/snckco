@@ -14,6 +14,7 @@ angular.module('snckcoApp')
 	$scope.inputValue = false;
 	$scope.machineIdentification;
 	$scope.pooper = false;
+	$scope.resultsIndicator = false;
 
 	$http.get('/api/machines').success(function(data) {
                 $scope.machineIdentification = data;
@@ -101,6 +102,7 @@ angular.module('snckcoApp')
 
 	$scope.menuItemBackground = false;
 
+
 	$scope.snckButton = function () {
 		$scope.votes = !($scope.votes);
 		$scope.menuItemBackground = !($scope.menuItemBackground);
@@ -108,9 +110,9 @@ angular.module('snckcoApp')
 
 
     $scope.currentSotwOne = _.pluck(_.where($scope.sotwCount, {'name' : 'milkOreo'}), "snackOfTheWeek");
-    $scope.currentSotwTwo = _.pluck(_.where($scope.sotwCount, {"name" : "banana"}), "snackOfTheWeek");
-    $scope.currentSotwThree = _.pluck(_.where($scope.sotwCount, {'name' : 'babyBottleBerry'}), "snackOfTheWeek");
-    $scope.currentSotwFour = _.pluck(_.where($scope.sotwCount, {'name' : 'hungryMonkeyBad'}), "snackOfTheWeek");
+    $scope.currentSotwTwo = _.pluck(_.where($scope.sotwCount, {"name" : "scratchCookie"}), "snackOfTheWeek");
+    $scope.currentSotwThree = _.pluck(_.where($scope.sotwCount, {'name' : 'toblerone'}), "snackOfTheWeek");
+    $scope.currentSotwFour = _.pluck(_.where($scope.sotwCount, {'name' : 'hungryMonkeyWedding'}), "snackOfTheWeek");
     $scope.valueSotwOne = $scope.currentSotwOne[0];
     $scope.valueSotwTwo = $scope.currentSotwTwo[0];
     $scope.valueSotwThree = $scope.currentSotwThree[0];
@@ -118,20 +120,44 @@ angular.module('snckcoApp')
 
     //set card id to match corresponding cards2s schema 
     $scope.idOne = _.pluck(_.where($scope.sotwCount, {'name' : 'milkOreo'}), '_id');
-    $scope.idTwo = _.pluck(_.where($scope.sotwCount, {'name' : "banana"}), '_id');
-    $scope.idThree = _.pluck(_.where($scope.sotwCount, {'name' : 'babyBottleBerry'}), '_id');
-    $scope.idFour = _.pluck(_.where($scope.sotwCount, {'name' : 'hungryMonkeyBad'}), '_id');
+    $scope.idTwo = _.pluck(_.where($scope.sotwCount, {'name' : "scratchCookie"}), '_id');
+    $scope.idThree = _.pluck(_.where($scope.sotwCount, {'name' : 'toblerone'}), '_id');
+    $scope.idFour = _.pluck(_.where($scope.sotwCount, {'name' : 'hungryMonkeyWedding'}), '_id');
     $scope.valueIdOne = $scope.idOne[0];
     $scope.valueIdTwo = $scope.idTwo[0];
     $scope.valueIdThree = $scope.idThree[0];
     $scope.valueIdFour = $scope.idFour[0];
 
+    //if ya aint first your last indicator setup
+    $scope.lastOne = false;
+    $scope.lastTwo = false;
+    $scope.lastThree = false;
+    $scope.lastFour = false;
+    $scope.resultsArray = [$scope.valueSotwOne, $scope.valueSotwTwo, $scope.valueSotwThree, $scope.valueSotwFour];
+
 
 
     if ($scope.getCurrentUser().snckOfTheWeek.length >= 1){
-			$scope.submitted = true;
+    	$scope.resultsIndicator = !($scope.resultsIndicator);
+		if (_.max($scope.resultsArray) == $scope.valueSotwOne){
+    		$scope.lastTwo = true;
+    		$scope.lastThree = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwTwo){
+    		$scope.lastOne = true;
+    		$scope.lastThree = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwThree){
+    		$scope.lastOne = true;
+    		$scope.lastTwo = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwFour){
+    		$scope.lastOne = true;
+    		$scope.lastTwo = true;
+    		$scope.lastThree = true;
+    	}
 		} else {
-			$scope.submitted = false;
+			$scope.resultsIndicator = false;
 		}
 
 	};
@@ -158,7 +184,7 @@ angular.module('snckcoApp')
 	};
 	$scope.selectTwo= function() {
 		$scope.itemChosen = false;
-		$scope.snckWeekVote = 'banana';
+		$scope.snckWeekVote = 'scratchCookie';
 		$scope.currentSnackTally = $scope.valueSotwTwo + 1;
 		if ($scope.chooseTwo == true){
 			$scope.itemChosen =true;
@@ -177,7 +203,7 @@ angular.module('snckcoApp')
 	};
 	$scope.selectThree= function() {
 		$scope.itemChosen = false;
-		$scope.snckWeekVote = 'babyBottleBerry';
+		$scope.snckWeekVote = 'toblerone';
 		$scope.currentSnackTally = $scope.valueSotwThree + 1;
 		if ($scope.chooseThree == true){
 			$scope.itemChosen =true;
@@ -196,7 +222,7 @@ angular.module('snckcoApp')
 	};
 	$scope.selectFour= function() {
 		$scope.itemChosen = false;
-		$scope.snckWeekVote = 'hungryMonkeyBad';
+		$scope.snckWeekVote = 'hungryMonkeyWedding';
 		$scope.currentSnackTally = $scope.valueSotwFour + 1;
 		if ($scope.chooseFour == true){
 			$scope.itemChosen =true;
@@ -214,8 +240,8 @@ angular.module('snckcoApp')
 		}
 	};
 	$scope.submitSnck = function() {
-		$scope.submitted=!($scope.submitted);
-
+		//f$scope.submitted=!($scope.submitted);
+		$scope.resultsIndicator = !($scope.resultsIndicator);
 		//put vote in snckOfTheWeek
 		$http.put('/api/users/api/'+ $scope.getCurrentUser()._id +'/snckOfTheWeek', {snckOfTheWeek: $scope.snackWeekVote})
 		.success(function() {
@@ -228,25 +254,44 @@ angular.module('snckcoApp')
 	                })
 	                .error(console.log('errorrrrr'));
 	                $scope.valueSotwOne = $scope.currentSnackTally;
-        } else if ($scope.snckWeekVote == "banana") {
+        } else if ($scope.snckWeekVote == "scratchCookie") {
 			$http.put('/api/cards2s/' + $scope.valueIdTwo, {"name":$scope.nameFood, "snackOfTheWeek": $scope.currentSnackTally})
 	                .success(function() {
 	                })
 	                .error(console.log('errorrrrr'));
 	                $scope.valueSotwTwo = $scope.currentSnackTally;
-        } else if ($scope.snckWeekVote == "babyBottleBerry") {
+        } else if ($scope.snckWeekVote == "toblerone") {
 			$http.put('/api/cards2s/' + $scope.valueIdThree, {"name":$scope.nameFood, "snackOfTheWeek": $scope.currentSnackTally})
 	                .success(function() {
 	                })
 	                .error(console.log('errorrrrr'));
 	                $scope.valueSotwThree = $scope.currentSnackTally;
-        } else if ($scope.snckWeekVote == "hungryMonkeyBad") {
+        } else if ($scope.snckWeekVote == "hungryMonkeyWedding") {
 			$http.put('/api/cards2s/' + $scope.valueIdFour, {"name":$scope.nameFood, "snackOfTheWeek": $scope.currentSnackTally})
 	                .success(function() {
 	                })
 	                .error(console.log('errorrrrr'));
 	                $scope.valueSotwFour = $scope.currentSnackTally;
         }
+    	$scope.resultsArray = [$scope.valueSotwOne, $scope.valueSotwTwo, $scope.valueSotwThree, $scope.valueSotwFour];
+    	console.log(_.max($scope.resultsArray));
+    	if (_.max($scope.resultsArray) == $scope.valueSotwOne){
+    		$scope.lastTwo = true;
+    		$scope.lastThree = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwTwo){
+    		$scope.lastOne = true;
+    		$scope.lastThree = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwThree){
+    		$scope.lastOne = true;
+    		$scope.lastTwo = true;
+    		$scope.lastFour = true;
+    	} else if (_.max($scope.resultsArray) == $scope.valueSotwFour){
+    		$scope.lastOne = true;
+    		$scope.lastTwo = true;
+    		$scope.lastThree = true;
+    	}
 	};
 
 		$scope.myMachines = function () {

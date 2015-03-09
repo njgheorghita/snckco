@@ -21,7 +21,10 @@
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/milkOreo.jpg"></object-->
 							<button ng-click="isFlipped=!isFlipped" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
 							<p class="frontName"> Annedore's Milk Chocolate Oreo </p>
-							<button class="smallButton" ng-click="selectOne()">choose</button>
+							<button class="smallButton"  ng-class="{'last':lastOne}" ng-click="selectOne()">
+								<p ng-show="!resultsIndicator" style="color:white">choose</p>
+								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwOne}}</p>
+							</button>
 						</figure>
 					
 						<figure class="face back">
@@ -41,7 +44,10 @@
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/banana.svg"></object-->
 							<button ng-click="isFlippy=!isFlippy" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
 							<p> Scratch Bakery PB and Choc. Swirl Cookie</p>
-							<button class="smallButton" ng-click="selectTwo()">choose</button>
+							<button class="smallButton" ng-class="{'last':lastTwo}" ng-click="selectTwo()">
+								<p ng-show="!resultsIndicator" style="color:white">choose</p>
+								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwTwo}}</p>
+							</button>
 						</figure>
 					
 						<figure class="face back">
@@ -60,7 +66,10 @@
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/babyBottleBerry.svg"></object-->
 							<button ng-click="isFlippo=!isFlippo" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
 							<p>Toblerone</p>
-							<button class="smallButton" ng-click="selectThree()">choose</button>
+							<button class="smallButton" ng-class="{'last':lastThree}" ng-click="selectThree()">
+								<p ng-show="!resultsIndicator" style="color:white">choose</p>
+								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwThree}}</p>
+							</button>
 						</figure>
 					
 						<figure class="face back">
@@ -77,8 +86,11 @@
 							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg"></img>
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/hungryMonkeyBad.svg"></object-->
 							<button ng-click="isFlippen=!isFlippen" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p> Hungry Monkey Party Bites, Bad Boys </p>
-							<button class="smallButton" ng-click="selectFour()">choose</button>
+							<p> Hungry Monkey Party Bites, Wedding Cake </p>
+							<button class="smallButton"  ng-class="{'last':lastFour}" ng-click="selectFour()">
+								<p ng-show="!resultsIndicator" style="color:white">choose</p>
+								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwFour}}</p>
+							</button>
 						</figure>
 					
 						<figure class="face back">
@@ -86,21 +98,17 @@
                                 <span class="glyphicon glyphicon-ok-sign"></span>
                             </div>
                             <p>
-							Quart of delicious garlic, onion and poppin' corn</p>
-							<p>$2.25</p>
+							you'll want to marry this white chocolate cake popcorn</p>
+							<p>$2.00</p>
 							<a style="font-size:50%;" href="http://www.hungrymonkeypartybites.com" target="_blank">www.hungrymonkeypartybites.com</a>
 						</figure>
 					</div>
-					<div ng-show="!submitted" ng-hide="itemChosen"><button ng-click="submitSnck()" class="medButton">Vote!</button></div>
-					<div ng-show="submitted">
-						<p> Annedore's Milk Chocolate Oreo: {{valueSotwOne}} </p>
-						<p> Banana: {{valueSotwTwo}} </p>
-						<p> Baby Bottle Pop:Blue Raspberry: {{valueSotwThree}} </p>
-						<p> Hungry Monkey Party Bites, Bad Boys: {{valueSotwFour}} </p>
-						<br>
-						<h2>
-						Check back next week for new sncks!
-						</h2>
+					<div ng-show="!submitted" ng-hide="itemChosen">
+						<button class="medButton">
+							<p ng-show="!resultsIndicator" ng-click="submitSnck()">vote!</p>
+							<p ng-show="resultsIndicator" style="color:black;">thanks!</p>
+						</button>
+						<h3 ng-show="resultsIndicator">check back next week to vote on more sncks!</h3>
 					</div>
 				</div>
 			</div>

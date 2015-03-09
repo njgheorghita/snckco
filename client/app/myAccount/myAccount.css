@@ -75,6 +75,15 @@ h2 {
 .chosen {
 	border: 4px solid #2ED000;
 }
+.resultsIndicated {
+	background-color: blue;
+}
+.first{
+	background-color: #2ED000;
+}
+.last{
+	background-color: red;
+}
 
 li{
 list-style-type: none;

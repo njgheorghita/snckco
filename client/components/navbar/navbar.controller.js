@@ -8,7 +8,7 @@ angular.module('snckcoApp')
     }];
 
     $scope.variableNumber = getRandomSpan();
-    $scope.variableLink = './../../assets/images/machines/'+$scope.variableNumber+'.svg';
+    $scope.variableLink = './../../assets/images/machines/'+$scope.variableNumber+'.jpg';
 
     function getRandomSpan() {
       return Math.floor((Math.random()*13)+1);

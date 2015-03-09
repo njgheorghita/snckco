@@ -33,7 +33,7 @@ angular.module('snckcoApp')
 							// refresh the locally cached user
 							Auth.refresh();
 						});
-						$location.path('/card-stack');
+						$location.path('/myaccount');
 						break;
 					}
 				}else{
