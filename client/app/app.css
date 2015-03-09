@@ -33,6 +33,10 @@
  * App-wide Styles
  */
 
+ .container {
+    -webkit-transform: translateZ(0);
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
