@@ -135,7 +135,6 @@ list-style-type: none;
 }
 
 .cardFlip .face .front {
-	position: relative;
 	background-color: white;
 }
 
