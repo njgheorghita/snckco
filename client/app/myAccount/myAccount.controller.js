@@ -101,9 +101,11 @@ angular.module('snckcoApp')
 		});
 
 	$scope.menuItemBackground = false;
-
+	$scope.freshPressed = false
 
 	$scope.snckButton = function () {
+	if ($scope.freshPressed == false) {
+		$scope.freshPressed = !($scope.freshPressed);
 		$scope.votes = !($scope.votes);
 		$scope.menuItemBackground = !($scope.menuItemBackground);
 	//get sotw vote counts
@@ -159,6 +161,7 @@ angular.module('snckcoApp')
 		} else {
 			$scope.resultsIndicator = false;
 		}
+	}else {	$scope.votes = !($scope.votes);}
 
 	};
 
