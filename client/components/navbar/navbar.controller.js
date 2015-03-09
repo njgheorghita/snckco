@@ -11,7 +11,7 @@ angular.module('snckcoApp')
     $scope.variableLink = './../../assets/images/machines/'+$scope.variableNumber+'.svg';
 
     function getRandomSpan() {
-      return Math.floor((Math.random()*30)+1);
+      return Math.floor((Math.random()*13)+1);
     };
 
     $rootScope.$on('$stateChangeStart', function (evt, toState, toParams) {
