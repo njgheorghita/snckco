@@ -5,7 +5,7 @@
       background-image: url({{variableLink}});
       background-color: #85B4FF;
       background-position: center bottom;
-      height: 18vmin;
+      height: 13vmin;
       font-size: 2em;
       color: white;
       position:absolute;
@@ -72,7 +72,24 @@
     padding-top: 150px;
   }
 
-  
+  .logogogo {
+    border: 2px solid WHITE;
+    background-color: #03ACD4;
+    border-radius: 8px;
+    width: 39vmin;
+    height: 17vmin;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:3vmin;
+  }
+  .logogogo > p{
+    font-size: 9vmin;
+    color:white;
+    font-family: lobster;
+      text-shadow: 0px 0px 3px rgba(0,0,0,0.4),
+         0px 0px 3px rgba(0,0,0,0.1),
+         0px 10px 13px rgba(0,0,0,0.1);
+  }
  
   </style>
 
@@ -81,7 +98,7 @@
   <div class="container-fluid">
 
 
-      <img class="img-responsive" src="./../../assets/images/snck1.jpg" alt="I'm Yeoman"></image>
+      <div class="logogogo"><p>Sncks.Co</p><!--img class="img-responsive" src="./../../assets/images/snck1.jpg" alt="I'm Yeoman"></image--></div>
       <div class="navbar-header">
         <button class="navbar-toggle" type="button" ng-init="navCollapse=true" style="margin-top: -70px;"ng-click="navCollapse=!navCollapse">
           <span class="icon-bar"></span>

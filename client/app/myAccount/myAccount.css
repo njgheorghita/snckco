@@ -8,18 +8,19 @@ h2 {
 
 .p {
 	/*color:#E65C5C;*/
-	color:white;
-	background-color: #85B4FF;
+	color:#FEF96B;
+	background: -webkit-linear-gradient(left,#FF7DF4,#A584F5);
 	border: 1px solid white;
-	border-radius: 5px;
-	width: 90%;
+	border-radius: 50%;
+	line-height: 1em;
+	width: 50%;
 	height:2.5em;
-	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-         0px 8px 13px rgba(0,0,0,0.1),
-         0px 18px 23px rgba(0,0,0,0.1);
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.4),
+         0px 0px 3px rgba(0,0,0,0.1),
+         0px 10px 13px rgba(0,0,0,0.1);
 }
 .menuItemChosen {
-	background-color: #3399FF;
+	background: -webkit-linear-gradient(right,#FF7DF4,#A584F5);
 }
 .frontName{
 
@@ -30,10 +31,13 @@ h2 {
 }
 
 .greeting {
-	padding-top: 20vmin;
+	padding-top: 15vmin;
 	font-size: 6vmax;
 	font-family: lobster;
-	color: #3399FF;
+	color: #03ACD4;
+		/*text-shadow: 0px 0px 3px rgba(0,0,0,0.4),
+         0px 0px 3px rgba(0,0,0,0.1),
+         0px 10px 13px rgba(0,0,0,0.1);*/
 }
 
 .main {
