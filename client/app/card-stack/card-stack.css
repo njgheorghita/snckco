@@ -51,7 +51,6 @@ input {
   margin-top: 25%;
   width: 70%;
   height: auto;
-  font-size: 2em;
   line-height: 1.25em;
 }
 
@@ -59,13 +58,16 @@ input {
   height:85vmin;
   width:85vmin;
   max-height: 500px;
-
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.4),
+         0px 0px 3px rgba(0,0,0,0.1),
+         0px 10px 13px rgba(0,0,0,0.1);
   max-width: 450px;
 
  /* background-image: url('./../../assets/images/vending.jpg');*/
-  background-color: #EAE8E8;
+  /*background: -webkit-linear-gradient(right, #5CDE5C -10%,white,#FF6262 110%);*/
+  background-color: #03ACD4;
   background-position: center;
-  border: 10px solid #3399FF;
+  border: 10px solid #03ACD4;
   border-radius: 10px;
   margin: 1000px auto 0;
   margin-top: .5em;
@@ -87,7 +89,7 @@ input {
 
   .texticle {
     position: absolute;
-    color: #85B4FF;
+    color: #03ACD4;
     font-family: lobster;
     width: 100%;
     margin-left: -50%;
@@ -124,7 +126,6 @@ input {
   #viewport .card {
     width: 90%;
     height: 90%;
-    border-radius: 8px;
     position: absolute;
     left:150px;
     border-radius: 10px;
@@ -160,7 +161,7 @@ input {
     text-align: center;
     line-height: 100px;
     border-radius: 10px;
-    border: 2px solid gray;
+    border: 2px solid white;
     overflow: hidden;
 }
 #viewport .stack .card .front {

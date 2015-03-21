@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1 style="color:#3399FF; font-family: lobster; font-size: 15vmin; margin-top: 0em;margin-bottom: 20px;">Login</h1>
+      <h1 style="color:#03ACD4; font-family: lobster; font-size: 15vmin; margin-top: -3%;margin-bottom: 20px;">Login</h1>
       <!--p>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@test.com</code> / <code>test</code></p>
       <p>Admin account is <code>admin@admin.com</code> / <code>admin</code></p-->
     </div>
@@ -9,11 +9,29 @@
       <!--button class='btn' ng-click="fbLogin()">Login with Facebook</button-->
       <!--a href="/auth/local/auth/facebook" target="_self" class="facebook btn" style="border: 0px; height: auto; width: auto; font-size: 2em; font-family: lobster;">with Facebook</a-->
       <!--a href="/auth/local/auth/facebook" target="_self" class="facebook btn" style="border: 0px; height: auto; width: auto; font-size: 2em; font-family: lobster;">with Facebook</a-->
-      <p class="disclaimer">Facebook and Twitter login coming soon!</p>
-      <!--h1 style="font-size: 8vmin;font-family:lobster;color:#3399FF;margin-top:-5%;">
-        or
-      </h1-->
-      <form class="form" name="form" ng-submit="login(form)" novalidate>
+       <div>
+          <button class="btn btn-inverse btn-lg btn-login" ng-hide="loginIndicator" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #03ACD4; font-family:lobster; font-size:5vmin; border: 2px solid white; border-radius: 8px; padding-top:0px;width:30%;min-width:150px;">
+            with Twitter
+          </button>
+
+        </div>
+
+       <div>
+          <button class="btn btn-inverse btn-lg btn-login" ng-hide="loginIndicator" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #03ACD4; font-family:lobster; font-size:5vmin; border: 2px solid white; border-radius: 8px; padding-top:0px;width:30%;min-width:150px;">
+            with Facebook
+          </button>
+
+        </div>
+
+        <div>
+          <button class="btn btn-inverse btn-lg btn-login" ng-click="loginIndicator = !loginIndicator" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #03ACD4; font-family:lobster; font-size:5vmin; border: 2px solid white; border-radius: 8px; padding-top:0px; width:30%;min-width:150px;">
+            with Snck.Co
+          </button>
+
+        </div>
+
+
+      <form class="form" name="form" ng-hide="!loginIndicator"ng-submit="login(form)" novalidate>
 
         <div class="form-group">
           <label>Email</label>
@@ -40,8 +58,8 @@
         <br>
 
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #3399FF; font-family:lobster; font-size:5vmin; border: 2px solid #3399FF; border-radius: 8px; padding-top:0px;">
-            with Snck.Co
+          <button class="btn btn-inverse btn-lg btn-login" type="submit" style="height: 4vmax; vertical-align: middle; width: auto; color: white; background-color: #03ACD4; font-family:lobster; font-size:5vmin; border: 2px solid white; border-radius: 8px; padding-top:0px;">
+            submit
           </button>
 
         </div>
@@ -49,7 +67,6 @@
       </form>
     </div>
   </div>
-  <hr>
 </div>
 
 <footer class="footer">

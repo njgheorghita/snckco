@@ -15,9 +15,11 @@ angular.module('snckcoApp')
 
 	$scope.submitButton = function() {
 		$scope.upperMachineId = $scope.machineId.toUpperCase();
+		$scope.machineCount =0;
 
 		machineService.setSetId($scope.upperMachineId);
-
+//ATTENTION THIS IS STILL ONLY BUILT TO HANDLE ONE MACHINE PER USER
+//"YOU'VE ALREADY REGISTERED THAT MACHINE" ONLY WORKS IF USER KNOWS/USES MAX ONE CODE
 		for (var i = 0; i < $scope.machineIdentification.length; i++) {
 
 			if ($scope.machineIdentification[i].machineId == $scope.upperMachineId) {
@@ -25,7 +27,7 @@ angular.module('snckcoApp')
 				if ($scope.getCurrentUser.name != undefined) {
 
 					if ($scope.getCurrentUser.machineIds == $scope.upperMachineId) {
-						$scope.errorMessageId = "You've already registered that machine";
+						$scope.errorMessageIdOne = "You've already registered that machine";
 						break;
 					} else {
 						$http.put('/api/users/api/' + $scope.getCurrentUser._id + '/addMachine', {machineId: $scope.upperMachineId})
@@ -40,10 +42,16 @@ angular.module('snckcoApp')
 					$location.path('/signup');
 				}
 			} else {
-				$scope.errorMessageId = "that's not right";
+				$scope.errorMessageIdTwo = "that's not right";
+				$scope.machineCount ++;
 			}
 		};
 		$scope.machineId = '';
-		$scope.errorMessage = $scope.errorMessageId;
+		//two errormessageId's so that we don't get wrongful error messages displaying during page transition
+		$scope.errorMessage = $scope.errorMessageIdOne;
+		if ($scope.machineCount == $scope.machineIdentification.length){
+			$scope.errorMessage = $scope.errorMessageIdTwo;
+		}
+
 	};
 }]);

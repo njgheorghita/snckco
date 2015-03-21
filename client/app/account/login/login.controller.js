@@ -4,6 +4,7 @@ angular.module('snckcoApp')
   .controller('LoginCtrl', ["$scope", "Auth", "$location", function ($scope, Auth, $location) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.loginIndicator = false;
 
     $scope.login = function(form) {
       $scope.submitted = true;

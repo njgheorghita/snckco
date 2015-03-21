@@ -1,13 +1,45 @@
      [{   
      	"machineId":"J3AN3",
-     	"location":"PHS Bookstore"
+     	"location":"PHS Bookstore",
+          "sotw0":"milkOreo",
+          "sotw1":"hungryMonkeyWedding",
+          "sotw2":"scratchCookie",
+          "sotw3":"toblerone",
+          "tally0":0,
+          "tally1":0,
+          "tally2":0,
+          "tally3":0
      },{
           "machineId":"JVNE",
-          "location":"Cerner 3rd Floor"
+          "location":"Cerner 3rd Floor",
+          "sotw0":"milkOreo",
+          "sotw1":"hungryMonkeyWedding",
+          "sotw2":"scratchCookie",
+          "sotw3":"toblerone",
+          "tally0":0,
+          "tally1":0,
+          "tally2":0,
+          "tally3":0
      },{
           "machineId":"MYL33",
-          "location":"W&M Botetourt Basement"
+          "location":"W&M Botetourt Basement",
+          "sotw0":"scratchCookie",
+          "sotw1":"hungryMonkeyWedding",
+          "sotw2":"milkOreo",
+          "sotw3":"toblerone",
+          "tally0":0,
+          "tally1":0,
+          "tally2":0,
+          "tally3":0
      },{
           "machineId":"NO3L",
-          "location":"Apple Headquarters 18th Floor"
+          "location":"Apple Headquarters 18th Floor",
+          "sotw0":"milkOreo",
+          "sotw1":"banana",
+          "sotw2":"banana",
+          "sotw3":"hungryMonkeyBad",
+          "tally0":0,
+          "tally1":0,
+          "tally2":0,
+          "tally3":0
      }]

@@ -5,7 +5,16 @@ var mongoose = require('mongoose'),
 
 var MachineSchema = new Schema({
   machineId: String,
-  location: String
+  location: String,
+  sotw0:String,
+  sotw1:String,
+  sotw2:String,
+  sotw3:String,
+  tally0:Number,
+  tally1:Number,
+  tally2:Number,
+  tally3:Number
+
 });
 
 module.exports = mongoose.model('Machine', MachineSchema);

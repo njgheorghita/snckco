@@ -13,14 +13,14 @@ angular.module('snckcoApp')
     	}*/
 
     var currentMachine = [{
-    	currentMachineId: 'asdfasdf',
+    	currentMachineId: '',
     }];
 
     return {
     	setSetId: function(setId) {
     		currentMachine.currentMachineId = setId;
     	},
-    	getSetId: function () {
+    	getSetId: function() {
     		return currentMachine.currentMachineId;
     	}
     };

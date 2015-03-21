@@ -5,13 +5,20 @@ p {
 h2 {
 	font-size:6vmax;
 }
-
+.widthtest{
+	/*background-image:url('./../../assets/images/photo.jpg');
+	background-position:center;width:cover;*/
+	/*background-color: white;*/
+}
+.votes{
+	margin-top: 0%;
+}
 .p {
-	/*color:#E65C5C;*/
-	color:#FEF96B;
-	background: -webkit-linear-gradient(left,#FF7DF4,#A584F5);
-	border: 1px solid white;
-	border-radius: 50%;
+	/*color:#FEF96B;
+	*/color:white;
+	background: #03ACD4;
+	border: 1px solid transparent;
+	border-radius: 25px;
 	line-height: 1em;
 	width: 50%;
 	height:2.5em;
@@ -20,9 +27,15 @@ h2 {
          0px 10px 13px rgba(0,0,0,0.1);
 }
 .menuItemChosen {
-	background: -webkit-linear-gradient(right,#FF7DF4,#A584F5);
+	/*background: -webkit-linear-gradient(right,#FF7DF4,#A584F5);*/
+	background-color:#03ACD4;
 }
-.frontName{
+.flash {
+	height:1.4em;
+	margin-bottom:10px;
+	background-color:transparent;
+	border-radius:50%;
+	border:2px solid transparent;
 
 }
 .header {
@@ -35,55 +48,86 @@ h2 {
 	font-size: 6vmax;
 	font-family: lobster;
 	color: #03ACD4;
+	border-radius: 5px;
+	width:70%;
+	margin-right: auto;
+	margin-left: auto;
 		/*text-shadow: 0px 0px 3px rgba(0,0,0,0.4),
          0px 0px 3px rgba(0,0,0,0.1),
          0px 10px 13px rgba(0,0,0,0.1);*/
 }
-
+button {
+	background-color: transparent;
+}
 .main {
 	font-size: 2em;
 }
 
 .list{
-	font-size: 1em;
+	font-size: .75em;
 }
 
 .smallButton {
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 5px;
-	border:1px solid #2ED000;
-	color:white;
-	background-color: #2ED000;
+	border-radius: 50%;
+	border:1px solid black;
+	color:black;
+	background:white;
 	bottom:3%;
+
 }
 .cardFlip .front > button.smallButton{
 	position: absolute;
 		vertical-align: bottom;
 		margin-top: 10%;
 		width: 50%;
-		height:20%;
+		height:15%;
 		margin-left: -25%;
 }
 
+.medButton > p {
+		color:#FEF96B;
 
+}
 .medButton {
-	color:black;
 	height:2em;
 	width: 4em;
-	border-radius: 5px;
+		background: -webkit-linear-gradient(right,#FF7DF4,#A584F5);
+
+	border-radius: 50%;
 	margin-top: 10px;
-	border: 1px solid black;
+	border: 1px solid white;
+}
+
+.machineList {
+	margin-bottom: -5%;
+	
+	}
+
+.machineList > li {
+	display:inline;
+	list-style-type: none;
+}
+.list > p {
+	background-color: white;
+	color:#03ACD4;
+	width:20%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+
 }
 
 .chosen {
-	border: 4px solid #2ED000;
+	/*border: 4px solid #03ACD4;*/
+		background: -webkit-linear-gradient(right,#FF7DF4 -50%,white,#A584F5 150%);
 }
 .resultsIndicated {
 	background-color: blue;
 }
 .first{
-	background-color: #2ED000;
+	background-color: green;
 }
 .last{
 	background-color: red;
@@ -113,16 +157,19 @@ list-style-type: none;
 	margin-left: auto;
 	-webkit-perspective:800;
 }
+.notClasssy {
+	font-size: 250%;
+	line-height: 1em;
+}
 
 .submitButton {
 	width: 50em;
 }
 .cardFlip {
-  z-index: -1;
   float: left;
   box-sizing: borderbox;
 	margin: 5px;
-	border: 2px solid #85B4FF;
+	border: 2px solid gray;
 	border-radius: 5px;
 	height:25%;
 	width: 23%;
@@ -133,7 +180,7 @@ list-style-type: none;
 	width: 30vmin;*/
 	-webkit-transform-style: preserve-3d;
     -webkit-transition: 0.5s;
-	-webkit-transform-origin: right center;
+	-webkit-transform-origin: right center;    
 }
 @media only screen and (max-width: 768px) {
     .cardFlip {
@@ -142,67 +189,61 @@ list-style-type: none;
 }
 .cardFlip.flipped {
   -webkit-transform: translateX(-100%) rotateY(180deg);
+}	
 
-}
-
-.cardFlip .face {
-  -webkit-backface-visibility:hidden;
-  background-color: white;
-  position: absolute;
-  overflow: hidden;
-
-
-}
-
-.cardFlip .face .front {
-	background-color: white;
-	overflow: hidden;
-}
 
 .cardFlip .front > button {
 	margin-bottom: 0;
 	margin-left:-2em;
 	height:50px;
 }
-
-.cardflip > figure {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
+.cardFlip .back > button {
+	margin-bottom: 0;
+	margin-right:-7.5em;
+	height:50px;
 }
+
 
 .cardFlip .back {
     -webkit-transform: rotateY(-180deg);
-  background-color: white;
+background-color:white;
+border-radius: 5px;
+}
+.front, .back {
+	z-index:1;
 }
 
 .cardFlip > figure > p {
 	width: 80%;
 	margin:auto;
 	height:32%;
+	font-size: 70%;
 }
-.cardFlip figure {
+.cardFlip >figure {
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size:4.5vmin;
+  font-size:4.5vmin;  
+    background-color: white;
+  overflow: hidden;
+  		-webkit-backface-visibility:hidden;
+
+
 }
 
 .cardFlip >figure >img {
 	height:auto;
 	width: 10vmax;
+	border-radius: 10px;
 }
 .killing {
 	font-size: 3em;
 	font-family: lobster;
-	color: #3399FF;
+	color: #03ACD4;
+	line-height:2em;
 }
 
-.mymachines {
-}
 
 .machineInfo {
 	font-size: 5vmax;
@@ -212,14 +253,24 @@ list-style-type: none;
 
 .glyphicon{
 	font-size: 1em;
+	color:#03ACD4;
 	vertical-align: text-bottom;
 }
 .glyphicon-ok-sign {
 	height:15%;
 	top:15vmin;right:-1vmin;position:absolute;max-width:10vmin;max-height:10vmin;
 }
-
+.glyphicon-heart {
+	color:#FEF96B;
+	font-size: 200%;
+}
+.accountHeader {
+	font-size:.75em;
+	font-style: italic;
+}
 
 .fancyPrint{
 	font-family: lobster;
+	font-size:75%;
+	color:#03ACD4;
 }

@@ -1,8 +1,10 @@
 <div class="widthtest" ng-controller="MyAccountCtrl">	
 
 		<div class="greeting">
-			<h2 style="margin-bottom:10px;" ng-hide="!votes || !feedback || !account || !hello">
-				Hey {{ getCurrentUser().name }} 
+			<h2 class="flash" style="width:100%;height:1.4em;padding-top:0%;color:#03ACD4;"ng-hide="!votes || !feedback || !account || !hello">
+				<span class="glyphicon glyphicon-star-empty" ></span>
+					Hey {{ getCurrentUser().name }} 
+				<span class="glyphicon glyphicon-star-empty" ></span>
 			</h2>
 		</div>
 
@@ -10,97 +12,128 @@
 					<button class="p" ng-class="{'menuItemChosen':menuItemBackground}"style="font-size:7vmin;" ng-click="snckButton()">
 						Snck of the Week
 					</button>
-
-				<div class="classsy" style="margin-left:auto;margin-right:auto;"ng-show="!votes">
-
+				<div class="notClasssy" ng-show="noRegisteredMachine">
+					you haven't registered a machine yet ya dangus<br>
+					<a href="/">
+						<span class="glyphicon glyphicon-plus-sign"></span> <span class="fancyPrint">add a machine</span></a>
+				</div>
+				<div class="classsy" style="margin-left:auto;margin-right:auto;line-height:1em;" ng-show="!votes">
+					<div class="machineList">						
+						<li class="list" ng-hide="userRegisteredMachine1" ng-click="machineFunction0()">
+							<p style="color:#03ACD4;font-size:2em;">{{registeredMachine0}}</p>
+							<p style="color:#03ACD4;font-family:lobster;">{{valueRegisteredLocation0}}</p>
+						</li>
+						<li class="list" ng-hide="userRegisteredMachine2" ng-click="machineFunction1()" style="color:#03ACD4;">
+							<button>{{registeredMachine1}}</button>
+						</li>						
+						<li class="list" ng-hide="userRegisteredMachine3" ng-click="machineFunction2()" style="color:#03ACD4;">
+							<button>{{registeredMachine2}}</button>
+						</li>
+					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlipped}" ng-show="!submitted">
-						<figure class="face front" ng-class="{'chosen':chooseOne}">
-							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;"></img>
-							<img ng-src="./../../assets/images/milkOreo.jpg"></img>
+						<figure class="front" ng-class="{'chosen':chooseOne}">
+							<div ng-show="sotwArray[0].local" >
+								<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:105%;max-height:30%;"></img>
+							</div>
+							<img style="margin-top:10%;" ng-src="{{pictureLink0}}"></img>
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/milkOreo.jpg"></object-->
 							<button ng-click="isFlipped=!isFlipped" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p class="frontName"> Annedore's Milk Chocolate Oreo </p>
+							<p class="frontName"> {{sotwArray[0].proper}} </p>
 							<button class="smallButton"  ng-class="{'last':lastOne}" ng-click="selectOne()">
-								<p ng-show="!resultsIndicator" style="color:white">choose</p>
-								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwOne}}</p>
+								<p ng-show="!resultsIndicator">choose</p>
+								<p ng-show="resultsIndicator" style="color:black;">{{valueSotwOne}}</p>
 							</button>
 						</figure>
 					
-						<figure class="face back">
-							<div ng-click="isFlipped=!isFlipped" style="padding-top:10%;">
+						<figure class="back">
+							<button ng-click="isFlipped=!isFlipped" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
-                            </div>
-                            <p>milk chocolate covered oreo</p>
-							<p>$1.50</p>
-							<a style="font-size:50%;" href="http://www.annedores.com" target="_blank">www.annedores.com</a>
+                            </button>
+                            <p>{{sotwArray[0].description}}</p>
+							<p>{{sotwArray[0].price}}</p>
+							<div ng-hide="{{sotwArray[0].local}}">
+								<a style="font-size:50%;" href="http://www.scratchbakerykc.com" target="_blank">{{sotwArray[0].urlHomepage}}</a>
+							</div>
 						</figure>
 					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippy}" ng-show="!submitted">
-						<figure class="face front" ng-class="{'chosen':chooseTwo}">
-							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;"></img>
-							<img ng-src="./../../assets/images/scratchCookie.jpg"></img>
+						<figure class="front" ng-class="{'chosen':chooseTwo}">
+							<div ng-show="sotwArray[1].local">
+								<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:105%;max-height:30%;"></img>
+							</div>
+							<img style="margin-top:10%;" ng-src="{{pictureLink1}}"></img>
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/banana.svg"></object-->
-							<button ng-click="isFlippy=!isFlippy" style="right:-30%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p style="width:70%;"> Scratch Bakery PB and Choc. Swirl Cookie</p>
+							<button ng-click="isFlippy=!isFlippy" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
+							<p style="width:80%;">{{sotwArray[1].proper}}</p>
 							<button class="smallButton" ng-class="{'last':lastTwo}" ng-click="selectTwo()">
-								<p ng-show="!resultsIndicator" style="color:white">choose</p>
-								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwTwo}}</p>
+								<p ng-show="!resultsIndicator">choose</p>
+								<p ng-show="resultsIndicator" style="color:black;">{{valueSotwTwo}}</p>
 							</button>
 						</figure>
 					
-						<figure class="face back">
-							<div ng-click="isFlippy=!isFlippy" style="padding-top:10%;">
+						<figure class="back">
+							<button ng-click="isFlippy=!isFlippy" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
-                            </div>
-							<p>locally made deliciousness</p>
-							<p> $2.00 </p>
-							<a style="font-size:50%;" href="http://www.scratchbakerykc.com" target="_blank">www.scratchbakery.com</a>
+                            </button>
+							<p>{{sotwArray[1].description}}</p>
+							<p> {{sotwArray[1].price}} </p>
+							<div ng-hide="{{sotwArray[1].local}}">
+							<a style="font-size:50%;" href="http://www.scratchbakerykc.com" target="_blank">{{sotwArray[1].urlHomepage}}</a></div>
 						</figure>
 					</div>
 
 					<div class="cardFlip" ng-class="{'flipped':isFlippo}" ng-show="!submitted">
-						<figure class="face front" ng-class="{'chosen':chooseThree}">
-							<img ng-src="./../../assets/images/toblerone.jpg"></img>
+						<figure class="front" ng-class="{'chosen':chooseThree}">
+							<div ng-show="sotwArray[2].local">
+								<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:105%;max-height:30%;"></img>
+							</div>
+							<img style="margin-top:10%;" ng-src="{{pictureLink2}}"></img>
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/babyBottleBerry.svg"></object-->
 							<button ng-click="isFlippo=!isFlippo" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p>Toblerone</p>
+							<p>{{sotwArray[2].proper}}</p>
 							<button class="smallButton" ng-class="{'last':lastThree}" ng-click="selectThree()">
-								<p ng-show="!resultsIndicator" style="color:white">choose</p>
-								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwThree}}</p>
+								<p ng-show="!resultsIndicator">choose</p>
+								<p ng-show="resultsIndicator" style="color:black;">{{valueSotwThree}}</p>
 							</button>
 						</figure>
 					
-						<figure class="face back">
-							<div ng-click="isFlippo=!isFlippo" style="padding-top:10%;">
+						<figure class="back">
+							<button ng-click="isFlippo=!isFlippo" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
-                            </div>
-							<p>direct from the swiss alps</p>
-							<p>$2.50</p>
+                            </button>
+							<p>{{sotwArray[2].description}}</p>
+							<p>{{sotwArray[2].price}}</p>
+							<div ng-hide="{{sotwArray[2].local}}">
+								<a style="font-size:50%;" href="http://www.scratchbakerykc.com" target="_blank">{{sotwArray[2].urlHomepage}}</a>
+							</div>
 						</figure>
 					</div>
 					<div class="cardFlip" ng-class="{'flipped':isFlippen}" ng-show="!submitted">
-						<figure class="face front" ng-class="{'chosen':chooseFour}">
-							<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:35%;max-height:35%;border:0px solid white;"></img>
-							<img ng-src="./../../assets/images/hungryMonkeyWedding.jpg"></img>
+						<figure class="front" ng-class="{'chosen':chooseFour}">
+							<div ng-show="sotwArray[3].local">
+								<img ng-src="./../../assets/images/madeInKc.jpg" class="img-responsive" style="top:-1vmin;left:-1vmin;position:absolute;max-width:105%;max-height:30%;"></img>
+							</div>
+							<img style="margin-top:10%;" ng-src="{{pictureLink3}}"></img>
 							<!--object width="47%" type="image/svg+xml" data="./../../assets/images/hungryMonkeyBad.svg"></object-->
 							<button ng-click="isFlippen=!isFlippen" style="right:-33%;z-index:1"><span class="glyphicon glyphicon-info-sign" style="height:15%;"></span></button>
-							<p> Hungry Monkey Party Bites, Wedding Cake </p>
+							<p>{{sotwArray[3].proper}}</p>
 							<button class="smallButton"  ng-class="{'last':lastFour}" ng-click="selectFour()">
-								<p ng-show="!resultsIndicator" style="color:white">choose</p>
-								<p ng-show="resultsIndicator" style="color:white;">{{valueSotwFour}}</p>
+								<p ng-show="!resultsIndicator">choose</p>
+								<p ng-show="resultsIndicator" style="color:black;">{{valueSotwFour}}</p>
 							</button>
 						</figure>
 					
-						<figure class="face back">
-							<div ng-click="isFlippen=!isFlippen" style="padding-top:10%;">
+						<figure class="back">
+							<button ng-click="isFlippen=!isFlippen" style="padding-top:10%;">
                                 <span class="glyphicon glyphicon-ok-sign"></span>
-                            </div>
-                            <p>
-							you'll want to marry this white chocolate cake popcorn</p>
-							<p>$2.00</p>
-							<a style="font-size:50%;" href="http://www.hungrymonkeypartybites.com" target="_blank">www.hungrymonkeypartybites.com</a>
+                            </button>
+                            <p>{{sotwArray[3].description}}</p>
+							<p>{{sotwArray[3].price}}</p>
+							<div ng-hide="{{sotwArray[3].local}}">
+								<a style="font-size:50%;" href="http://www.hungrymonkeypartybites.com" target="_blank">{{sotwArray[3].urlHomepage}}</a>
+							</div>
 						</figure>
 					</div>
 					<div ng-show="!submitted" ng-hide="itemChosen">
@@ -108,13 +141,14 @@
 							<p ng-show="!resultsIndicator" ng-click="submitSnck()">vote!</p>
 							<p ng-show="resultsIndicator" style="color:black;">thanks!</p>
 						</button>
-						<h3 ng-show="resultsIndicator">check back next week to vote on more sncks!</h3>
+						<h3 ng-show="resultsIndicator">vote 5X = free sncks! your count: {{currentUserSotwCount}}</h3>
 					</div>
 				</div>
 			</div>
 			<div class="mymachines" style="width:100%;margin-left:auto;margin-right:auto;" ng-hide="!votes || !account || !feedback">
 				<button class="p" ng-class="{'menuItemChosen':menuItemBackground}" style="font-size:7vmin;" ng-click="myMachines()">
-					My Sncks
+					<span ng-show="hello">My Sncks</span>
+					<span ng-show="!hello">I want sncks like . . .</span>
 				</button>
 				<div class="machineInfo">
 					<div ng-show="!hello" style="line-height:1em;">
@@ -125,7 +159,7 @@
 
     <div id="viewport">
 
-        <div class="comeBackSoon" style="font-size:7vmin;">
+        <div class="comeBackSoon" style="font-size:6vmin;color:white;">
             That's it for now. Check back soon for more sncks!
         </div>
 
@@ -141,7 +175,7 @@
                         <div class="face front">
                             <p class="card" swing-stack></p>
                                 <img ng-src="./../../assets/images/{{card.name}}.jpg" style="width:25vmax;height:25vmax;max-height:250px;max-width:250px;"></img>
-                                <div class="properName" style="line-height: 1em;font-size:5vmin;">
+                                <div class="properName" style="line-height: 1em;font-size:4vmin;">
                                     {{card.proper}}
                                 </div>
 
@@ -154,15 +188,15 @@
                                 </div>
                                     
                                 <div class="swipey">
-                                    <span class="texticle" style="font-size:8vmin;">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="texticle" style="font-size:5vmin;">
+                                        <span class="glyphicon glyphicon-chevron-left" style="color:#FF6262"></span>
                                             <span>swipe</span>
-                                        <span class="glyphicon glyphicon-chevron-right" ng-click="throwout(null, {throwDirection: 1}, $index)"></span>
+                                        <span class="glyphicon glyphicon-chevron-right" style="color:#5CDE5C"></span>
                                     </span>   
                                 </div>
                                     
                                 <div ng-click="isFlipped=!isFlipped" style="position:absolute; top:40%; left:-1vmin;">
-                                    <span class="glyphicon glyphicon-info-sign" style="font-size:10vmin;"></span>
+                                    <span class="glyphicon glyphicon-info-sign" style="font-size:6vmin;"></span>
                                 </div>
                                 
                             
@@ -170,7 +204,7 @@
 
                     <div class="face back">
                             <div ng-click="isFlipped=!isFlipped" style="right:0;">
-                                <span class="glyphicon glyphicon-ok-sign" style="top:40%;font-size:10vmin;right:-2%;"></span>
+                                <span class="glyphicon glyphicon-ok-sign" style="top:40%;font-size:6vmin;right:-2%;"></span>
                             </div>
                         <div style="margin-top: 10%;">
                             <p style="font-size:7vmin;">{{card.price}}</p>
@@ -195,23 +229,24 @@
 				</button>
 
 				<div class="emailsss" ng-show="!account" style="line-height:1em;">
-					<p style="color:#2ED000;font-size:70%;width:70%;margin-left:auto;margin-right:auto;">
-						email: {{ getCurrentEmail().email }}
+					<p class="accountHeader">My Email</p>
+					<p style="color:#03ACD4;font-size:70%;width:70%;margin-left:auto;margin-right:auto;">
+						{{ getCurrentEmail().email }}
 					</p>
-					<p>
-						my machines
-						<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index" style="color:black;">
+					<p class="accountHeader">
+						My Machines</p>
+						<li class="list" ng-repeat="machines in getCurrentUser().machineIds track by $index" style="color:#03ACD4;">
 						 {{machines}} 		<br>
 						</li>
 						<br>
-						<a href="/">
+						<a href="/" style="font-size:.6em;">
 						<span class="glyphicon glyphicon-plus-sign"></span> <span class="fancyPrint">add a machine</span></a>
 					</p>
 				</div>
 			</div>
 			<div class="feedback" ng-hide="!votes || !account || !hello">
 				<button class="p" ng-class="{'menuItemChosen':menuItemBackground}" style="font-size:7vmin;" ng-click="feedbackBackground();">
-					Tell Us What You Want
+					Feedback
 				</button>
 
 				<div ng-show="!feedback">
@@ -219,15 +254,16 @@
 						<div ng-hide"inputValue" class="ng-hide">
 						</div>
 						<div ng-hide="inputValue">
-							<p style="color:#3399FF; font-size: 4vmax; margin-left:auto; margin-right:auto; line-height: 1em;width:80%;"> Feedback makes us better at what we do.<br> <span style="font-size:.7em;">Leave any here along with snck requests or professions of love.</span></p>
+							<p style="color:#03ACD4; font-size: 4vmax; margin-left:auto; margin-right:auto; line-height: 1em;width:80%;"> Feedback makes us better at what we do.<br> <span style="font-size:.7em;">Leave any here along with snck requests or professions of love.</span></p>
 							<br>
 							<input type="text" class="form-control" data-ng-model="comment" style="width: 80%; margin-left: auto; margin-right: auto; text-align:center;">
 							<br>
-							<input type="submit" class="clear" value="submit" ng-click="savedata(); comment=''" style="width: 100px; height: 50px;">
+							<input type="submit" class="clear" value="submit" ng-click="savedata(); comment=''" style="width: 100px; height: 50px;background-color:#03ACD4;color:white;">
 						</div>
 						<br>
 							<div ng-hide"myValue" class="ng-hide"></div>
-							<div ng-hide="myValue" class="killing">{{thankYous[0]}}</div>
+							<div ng-hide="myValue" class="killing">{{thankYous[0]}}<br><span class="glyphicon glyphicon-heart"></span></div>
+
 						
 					</form>
 				</div>

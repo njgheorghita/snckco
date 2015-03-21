@@ -9,16 +9,18 @@ angular.module('snckcoApp')
     $scope.emailPreference = "";
     $scope.emailPrefSelected = false;
     $scope.emailCommunicate = false;
+    $scope.testCurrentMachine = "";
+    $scope.loginIndicatorSignup = false;
 
     $scope.register = function(form) {
       $scope.submitted = true;
-
-      if(form.$valid && $scope.emailPrefSelected == true) {
+      if(form.$valid && ($scope.emailPrefSelected == true)) {
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
           password: $scope.user.password,
           emailPreference: $scope.emailPreference
+//this is where we push first machineID    machineIds: $scope.testCurrentMachine
         })
         .then( function() {
           // Account created, redirect to home
