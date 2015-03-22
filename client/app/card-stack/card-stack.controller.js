@@ -7,6 +7,7 @@ angular.module('snckcoApp')
 .controller('Card-stackCtrl', ["$scope","$http","Auth","$location","$filter", function ($scope, $http, Auth, $location, $filter) {
 
         $scope.voteTally = 0; 
+        $scope.isFlipped = false;
 
         var shuffleArray = function(array) {
               var m = array.length, t, i;
@@ -31,7 +32,9 @@ angular.module('snckcoApp')
                 shuffleArray($scope.cards);
         });
 
-
+        $scope.flipperoo = function () {
+            $scope.isFlipped = !($scope.isFlipped);
+        };
 
         $scope.throwout = function (eventName, eventObject, $index) {
             $scope.getCurrentUser= Auth.getCurrentUser().name;
@@ -103,6 +106,7 @@ angular.module('snckcoApp')
 
         $scope.throwin = function (eventName, eventObject) {
             console.log('throwin', eventObject);
+            card.classList.remove("flipped");
         };
 
 
