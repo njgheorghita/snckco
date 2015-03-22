@@ -53,6 +53,16 @@ router.get('/auth/facebook', passport.authenticate('facebook', function (err, us
 router.get('/auth/facebook/callback', 
   passport.authenticate('facebook', { successRedirect: '/',
                                       failureRedirect: '/login' }));
+
+router.get('/auth/twitter', passport.authenticate('twitter', function (err, user, info){
+  console.log(info, 'asdfasdfas');
+  var token = auth.signToken(user._id,user.role);
+  res.json({token:token});}
+  ));
+
+router.get('/auth/twitter/callback', 
+  passport.authenticate('twitter', {successRedirect: '/myaccount',
+                                    failureRedirect: '/login' }));
   
 router.get('/success',function(req,res){
   console.log("redireced to the",req.user);

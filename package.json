@@ -26,6 +26,7 @@
     "socketio-jwt": "^2.0.2",
     "cors": "latest",
     "passport-facebook": "~1.0.3",
+    "passport-twitter":"~1.0.3",
     "bower": "latest"
   },
   "devDependencies": {

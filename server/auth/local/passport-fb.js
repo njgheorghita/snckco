@@ -11,7 +11,6 @@ exports.setup = function (User, config) {
     profileFields: ['id', 'displayName', 'emails']
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
       User.findOne({ email: profile._json.email }, function(err, user) {
             console.log(err, "errortag", user);
             if(err) { console.log(err); }
@@ -28,7 +27,6 @@ exports.setup = function (User, config) {
                     password: profile.emails[0].value
                 });
                 user.save(function(err) {
-                    
                     if(err) {
                         console.log(err);
                     } else {
